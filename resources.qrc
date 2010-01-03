@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/img" >
+        <file>sub.png</file>
+        <file>add.png</file>
+        <file>tree.png</file>
+        <file>chart.png</file>
+    </qresource>
+</RCC>
