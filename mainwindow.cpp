@@ -10,7 +10,7 @@ MainWindow::MainWindow(QWidget *parent)
 this->manager = new NetWorkManager();
 this->setCentralWidget(this->manager);
 
-
+connect(this->ui->actionNetWorkManager,SIGNAL(triggered()),this->manager,SLOT(LaunchLearningTool()));
 
 
 }
@@ -19,6 +19,7 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
+
 
 
 

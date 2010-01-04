@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading ui file 'networkmanager.ui'
 **
-** Created: Mon Jan 4 00:15:08 2010
+** Created: Mon Jan 4 14:45:04 2010
 **      by: Qt User Interface Compiler version 4.5.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling ui file!

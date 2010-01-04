@@ -1,6 +1,8 @@
 #include "networkmanager.h"
 #include "setupnewnetwork.h"
+#include "learningtool.h"
 #include <iostream>
+#include<QMessageBox>
 NetWorkManager::NetWorkManager(QWidget *parent) :
     QWidget(parent){
     setupUi(this);
@@ -69,4 +71,22 @@ switch(Index){
 this->networkTable->setItem(currentRow,3,new QTableWidgetItem(*label));
 delete label;
 
+}
+void NetWorkManager::LaunchLearningTool(){
+int currentRow = this->networkTable->currentRow();
+
+if(currentRow > -1){
+
+int NbrNeurons = this->networkTable->item(currentRow,1)->text().toInt();
+int NbrEntries = this->networkTable->item(currentRow,2)->text().toInt();
+QString name = this->networkTable->item(currentRow,0)->text();
+QString Threshold = this->networkTable->item(currentRow,3)->text();
+
+LearningTool * learn = new LearningTool(NbrNeurons,NbrEntries,Threshold,name);
+learn->setVisible(true);
+} else {
+   QMessageBox msgBox;
+ msgBox.setText("You have to create and select one network at least.");
+ msgBox.exec();
+}
 }

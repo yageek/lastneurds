@@ -41,7 +41,6 @@
     <bool>false</bool>
    </attribute>
    <addaction name="actionNetWorkManager"/>
-   <addaction name="actionChart"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
   <action name="action_Quitter">
@@ -58,7 +57,7 @@
     <string>NetWorkManager</string>
    </property>
    <property name="toolTip">
-    <string>Access to the NetWorkManager</string>
+    <string>Launch learning tool</string>
    </property>
   </action>
   <action name="actionChart">

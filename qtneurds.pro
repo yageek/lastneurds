@@ -13,7 +13,8 @@ SOURCES += main.cpp \
     Seuil_function.c \
     Neurone.cpp \
     networkmanager.cpp \
-    setupnewnetwork.cpp
+    setupnewnetwork.cpp \
+    learningtool.cpp
 HEADERS += mainwindow.h \
     Network.h \
     Truth.h \
@@ -22,8 +23,10 @@ HEADERS += mainwindow.h \
     Neurone.h \
     Seuil_function.h \
     networkmanager.h \
-    setupnewnetwork.h
+    setupnewnetwork.h \
+    learningtool.h
 FORMS += mainwindow.ui \
     networkmanager.ui \
-    setupnewnetwork.ui
+    setupnewnetwork.ui \
+    learningtool.ui
 RESOURCES += resources.qrc

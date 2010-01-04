@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'networkmanager.h'
 **
-** Created: Mon Jan 4 11:49:58 2010
+** Created: Mon Jan 4 14:45:15 2010
 **      by: The Qt Meta Object Compiler version 61 (Qt 4.5.2)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,7 +23,7 @@ static const uint qt_meta_data_NetWorkManager[] = {
        2,       // revision
        0,       // classname
        0,    0, // classinfo
-       3,   12, // methods
+       4,   12, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -32,6 +32,7 @@ static const uint qt_meta_data_NetWorkManager[] = {
       16,   15,   15,   15, 0x08,
       29,   15,   15,   15, 0x08,
       75,   42,   15,   15, 0x08,
+     106,   15,   15,   15, 0x08,
 
        0        // eod
 };
@@ -40,6 +41,7 @@ static const char qt_meta_stringdata_NetWorkManager[] = {
     "NetWorkManager\0\0AddNetWork()\0SubNetWork()\0"
     "NbrNeurons,NbrEntries,Index,name\0"
     "InsertRow(int,int,int,QString)\0"
+    "LaunchLearningTool()\0"
 };
 
 const QMetaObject NetWorkManager::staticMetaObject = {
@@ -70,9 +72,10 @@ int NetWorkManager::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 0: AddNetWork(); break;
         case 1: SubNetWork(); break;
         case 2: InsertRow((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2])),(*reinterpret_cast< int(*)>(_a[3])),(*reinterpret_cast< QString(*)>(_a[4]))); break;
+        case 3: LaunchLearningTool(); break;
         default: ;
         }
-        _id -= 3;
+        _id -= 4;
     }
     return _id;
 }

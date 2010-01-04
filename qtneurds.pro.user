@@ -62,7 +62,7 @@
   <valuemap type="QVariantMap" >
    <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString" >Debug</value>
    <valuelist key="abstractProcess.Environment" type="QVariantList" >
-    <value type="QString" >DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-syMsVSwFG4,guid=d63f7def50d3b445c29548814b41bd5a</value>
+    <value type="QString" >DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-sqPBUwM7RA,guid=11b38989a9d2414cf69c056d4b41e738</value>
     <value type="QString" >DESKTOP_SESSION=gnome</value>
     <value type="QString" >DESKTOP_STARTUP_ID=</value>
     <value type="QString" >DISPLAY=:0.0</value>
@@ -70,8 +70,8 @@
     <value type="QString" >GDM_KEYBOARD_LAYOUT=fr	oss</value>
     <value type="QString" >GDM_LANG=fr_FR.UTF-8</value>
     <value type="QString" >GNOME_DESKTOP_SESSION_ID=this-is-deprecated</value>
-    <value type="QString" >GNOME_KEYRING_PID=1383</value>
-    <value type="QString" >GNOME_KEYRING_SOCKET=/tmp/keyring-cpmJic/socket</value>
+    <value type="QString" >GNOME_KEYRING_PID=1891</value>
+    <value type="QString" >GNOME_KEYRING_SOCKET=/tmp/keyring-Kb3b8L/socket</value>
     <value type="QString" >GTK_MODULES=canberra-gtk-module</value>
     <value type="QString" >GTK_RC_FILES=/etc/gtk/gtkrc:/home/yaya/.gtkrc-1.2-gnome2</value>
     <value type="QString" >HOME=/home/yaya</value>
@@ -83,16 +83,16 @@
     <value type="QString" >PATH=/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games</value>
     <value type="QString" >PWD=/home/yaya</value>
     <value type="QString" >QTDIR=/usr</value>
-    <value type="QString" >SESSION_MANAGER=local/yaya-laptop:@/tmp/.ICE-unix/1398,unix/yaya-laptop:/tmp/.ICE-unix/1398</value>
+    <value type="QString" >SESSION_MANAGER=local/yaya-laptop:@/tmp/.ICE-unix/1906,unix/yaya-laptop:/tmp/.ICE-unix/1906</value>
     <value type="QString" >SHELL=/bin/bash</value>
     <value type="QString" >SPEECHD_PORT=7560</value>
-    <value type="QString" >SSH_AGENT_PID=1472</value>
-    <value type="QString" >SSH_AUTH_SOCK=/tmp/keyring-cpmJic/socket.ssh</value>
+    <value type="QString" >SSH_AGENT_PID=1970</value>
+    <value type="QString" >SSH_AUTH_SOCK=/tmp/keyring-Kb3b8L/socket.ssh</value>
     <value type="QString" >USER=yaya</value>
     <value type="QString" >USERNAME=yaya</value>
-    <value type="QString" >XAUTHORITY=/var/run/gdm/auth-for-yaya-Yl2s69/database</value>
+    <value type="QString" >XAUTHORITY=/var/run/gdm/auth-for-yaya-lYzz5y/database</value>
     <value type="QString" >XDG_DATA_DIRS=/usr/share/gnome:/usr/local/share/:/usr/share/</value>
-    <value type="QString" >XDG_SESSION_COOKIE=0250e91bdd13949fa59b26014af1f2dd-1262599513.918398-568135759</value>
+    <value type="QString" >XDG_SESSION_COOKIE=0250e91bdd13949fa59b26014af1f2dd-1262610231.554739-802593396</value>
    </valuelist>
    <valuelist key="abstractProcess.arguments" type="QVariantList" >
     <value type="QString" >/home/yaya/NetBeansProjects/qtNeurds/qtneurds/qtneurds.pro</value>
@@ -112,7 +112,7 @@
   <valuemap type="QVariantMap" >
    <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString" >Debug</value>
    <valuelist key="abstractProcess.Environment" type="QVariantList" >
-    <value type="QString" >DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-syMsVSwFG4,guid=d63f7def50d3b445c29548814b41bd5a</value>
+    <value type="QString" >DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-sqPBUwM7RA,guid=11b38989a9d2414cf69c056d4b41e738</value>
     <value type="QString" >DESKTOP_SESSION=gnome</value>
     <value type="QString" >DESKTOP_STARTUP_ID=</value>
     <value type="QString" >DISPLAY=:0.0</value>
@@ -120,8 +120,8 @@
     <value type="QString" >GDM_KEYBOARD_LAYOUT=fr	oss</value>
     <value type="QString" >GDM_LANG=fr_FR.UTF-8</value>
     <value type="QString" >GNOME_DESKTOP_SESSION_ID=this-is-deprecated</value>
-    <value type="QString" >GNOME_KEYRING_PID=1383</value>
-    <value type="QString" >GNOME_KEYRING_SOCKET=/tmp/keyring-cpmJic/socket</value>
+    <value type="QString" >GNOME_KEYRING_PID=1891</value>
+    <value type="QString" >GNOME_KEYRING_SOCKET=/tmp/keyring-Kb3b8L/socket</value>
     <value type="QString" >GTK_MODULES=canberra-gtk-module</value>
     <value type="QString" >GTK_RC_FILES=/etc/gtk/gtkrc:/home/yaya/.gtkrc-1.2-gnome2</value>
     <value type="QString" >HOME=/home/yaya</value>
@@ -133,16 +133,16 @@
     <value type="QString" >PATH=/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games</value>
     <value type="QString" >PWD=/home/yaya</value>
     <value type="QString" >QTDIR=/usr</value>
-    <value type="QString" >SESSION_MANAGER=local/yaya-laptop:@/tmp/.ICE-unix/1398,unix/yaya-laptop:/tmp/.ICE-unix/1398</value>
+    <value type="QString" >SESSION_MANAGER=local/yaya-laptop:@/tmp/.ICE-unix/1906,unix/yaya-laptop:/tmp/.ICE-unix/1906</value>
     <value type="QString" >SHELL=/bin/bash</value>
     <value type="QString" >SPEECHD_PORT=7560</value>
-    <value type="QString" >SSH_AGENT_PID=1472</value>
-    <value type="QString" >SSH_AUTH_SOCK=/tmp/keyring-cpmJic/socket.ssh</value>
+    <value type="QString" >SSH_AGENT_PID=1970</value>
+    <value type="QString" >SSH_AUTH_SOCK=/tmp/keyring-Kb3b8L/socket.ssh</value>
     <value type="QString" >USER=yaya</value>
     <value type="QString" >USERNAME=yaya</value>
-    <value type="QString" >XAUTHORITY=/var/run/gdm/auth-for-yaya-Yl2s69/database</value>
+    <value type="QString" >XAUTHORITY=/var/run/gdm/auth-for-yaya-lYzz5y/database</value>
     <value type="QString" >XDG_DATA_DIRS=/usr/share/gnome:/usr/local/share/:/usr/share/</value>
-    <value type="QString" >XDG_SESSION_COOKIE=0250e91bdd13949fa59b26014af1f2dd-1262599513.918398-568135759</value>
+    <value type="QString" >XDG_SESSION_COOKIE=0250e91bdd13949fa59b26014af1f2dd-1262610231.554739-802593396</value>
    </valuelist>
    <valuelist key="abstractProcess.arguments" type="QVariantList" >
     <value type="QString" >-w</value>
@@ -157,7 +157,7 @@
   <valuemap type="QVariantMap" >
    <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString" >Debug</value>
    <valuelist key="abstractProcess.Environment" type="QVariantList" >
-    <value type="QString" >DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-Q8uU0Y7X3P,guid=fad3763c2a67ed89bdc1fa314b408bdd</value>
+    <value type="QString" >DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-sqPBUwM7RA,guid=11b38989a9d2414cf69c056d4b41e738</value>
     <value type="QString" >DESKTOP_SESSION=gnome</value>
     <value type="QString" >DESKTOP_STARTUP_ID=</value>
     <value type="QString" >DISPLAY=:0.0</value>
@@ -165,8 +165,8 @@
     <value type="QString" >GDM_KEYBOARD_LAYOUT=fr	oss</value>
     <value type="QString" >GDM_LANG=fr_FR.UTF-8</value>
     <value type="QString" >GNOME_DESKTOP_SESSION_ID=this-is-deprecated</value>
-    <value type="QString" >GNOME_KEYRING_PID=1418</value>
-    <value type="QString" >GNOME_KEYRING_SOCKET=/tmp/keyring-9meGca/socket</value>
+    <value type="QString" >GNOME_KEYRING_PID=1891</value>
+    <value type="QString" >GNOME_KEYRING_SOCKET=/tmp/keyring-Kb3b8L/socket</value>
     <value type="QString" >GTK_MODULES=canberra-gtk-module</value>
     <value type="QString" >GTK_RC_FILES=/etc/gtk/gtkrc:/home/yaya/.gtkrc-1.2-gnome2</value>
     <value type="QString" >HOME=/home/yaya</value>
@@ -178,16 +178,16 @@
     <value type="QString" >PATH=/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games</value>
     <value type="QString" >PWD=/home/yaya</value>
     <value type="QString" >QTDIR=/usr</value>
-    <value type="QString" >SESSION_MANAGER=local/yaya-laptop:@/tmp/.ICE-unix/1433,unix/yaya-laptop:/tmp/.ICE-unix/1433</value>
+    <value type="QString" >SESSION_MANAGER=local/yaya-laptop:@/tmp/.ICE-unix/1906,unix/yaya-laptop:/tmp/.ICE-unix/1906</value>
     <value type="QString" >SHELL=/bin/bash</value>
     <value type="QString" >SPEECHD_PORT=7560</value>
-    <value type="QString" >SSH_AGENT_PID=1497</value>
-    <value type="QString" >SSH_AUTH_SOCK=/tmp/keyring-9meGca/socket.ssh</value>
+    <value type="QString" >SSH_AGENT_PID=1970</value>
+    <value type="QString" >SSH_AUTH_SOCK=/tmp/keyring-Kb3b8L/socket.ssh</value>
     <value type="QString" >USER=yaya</value>
     <value type="QString" >USERNAME=yaya</value>
-    <value type="QString" >XAUTHORITY=/var/run/gdm/auth-for-yaya-xNURre/database</value>
+    <value type="QString" >XAUTHORITY=/var/run/gdm/auth-for-yaya-lYzz5y/database</value>
     <value type="QString" >XDG_DATA_DIRS=/usr/share/gnome:/usr/local/share/:/usr/share/</value>
-    <value type="QString" >XDG_SESSION_COOKIE=0250e91bdd13949fa59b26014af1f2dd-1262521309.26710-511851729</value>
+    <value type="QString" >XDG_SESSION_COOKIE=0250e91bdd13949fa59b26014af1f2dd-1262610231.554739-802593396</value>
    </valuelist>
    <valuelist key="abstractProcess.arguments" type="QVariantList" >
     <value type="QString" >clean</value>

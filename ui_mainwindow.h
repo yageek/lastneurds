@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading ui file 'mainwindow.ui'
 **
-** Created: Mon Jan 4 00:19:46 2010
+** Created: Mon Jan 4 14:45:04 2010
 **      by: Qt User Interface Compiler version 4.5.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling ui file!
@@ -78,7 +78,6 @@ public:
         menuBar->addAction(menuQuitter->menuAction());
         menuQuitter->addAction(action_Quitter);
         mainToolBar->addAction(actionNetWorkManager);
-        mainToolBar->addAction(actionChart);
 
         retranslateUi(MainWindow);
         QObject::connect(action_Quitter, SIGNAL(activated()), MainWindow, SLOT(close()));
@@ -92,7 +91,7 @@ public:
         action_Quitter->setText(QApplication::translate("MainWindow", "&Quit", 0, QApplication::UnicodeUTF8));
         actionNetWorkManager->setText(QApplication::translate("MainWindow", "NetWorkManager", 0, QApplication::UnicodeUTF8));
 #ifndef QT_NO_TOOLTIP
-        actionNetWorkManager->setToolTip(QApplication::translate("MainWindow", "Access to the NetWorkManager", 0, QApplication::UnicodeUTF8));
+        actionNetWorkManager->setToolTip(QApplication::translate("MainWindow", "Launch learning tool", 0, QApplication::UnicodeUTF8));
 #endif // QT_NO_TOOLTIP
         actionChart->setText(QApplication::translate("MainWindow", "Chart", 0, QApplication::UnicodeUTF8));
         menuQuitter->setTitle(QApplication::translate("MainWindow", "File", 0, QApplication::UnicodeUTF8));
