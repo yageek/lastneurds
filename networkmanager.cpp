@@ -32,6 +32,12 @@ void NetWorkManager::changeEvent(QEvent *e)
 }
 
 void NetWorkManager::SubNetWork(){
+    int index = this->networkTable->currentRow();
+    if(index > -1){
+    this->networkTable->removeRow(index);
+
+
+    }
 }
 
 void NetWorkManager::AddNetWork(){
