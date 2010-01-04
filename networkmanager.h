@@ -13,6 +13,7 @@ protected:
   private slots:
     void AddNetWork();
     void SubNetWork();
+    void InsertRow(int NbrNeurons,int NbrEntries,int Index, QString name);
 };
 
 #endif // NETWORKMANAGER_H
