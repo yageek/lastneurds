@@ -14,7 +14,8 @@ SOURCES += main.cpp \
     Neurone.cpp \
     networkmanager.cpp \
     setupnewnetwork.cpp \
-    learningtool.cpp
+    learningtool.cpp \
+    neuroneitem.cpp
 HEADERS += mainwindow.h \
     Network.h \
     Truth.h \
@@ -24,7 +25,8 @@ HEADERS += mainwindow.h \
     Seuil_function.h \
     networkmanager.h \
     setupnewnetwork.h \
-    learningtool.h
+    learningtool.h \
+    neuroneitem.h
 FORMS += mainwindow.ui \
     networkmanager.ui \
     setupnewnetwork.ui \

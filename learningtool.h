@@ -2,6 +2,7 @@
 #define LEARNINGTOOL_H
 
 #include "ui_learningtool.h"
+ #include <QGraphicsScene>
 
 class LearningTool : public QWidget, private Ui::LearningTool {
     Q_OBJECT
@@ -16,6 +17,7 @@ private:
     int NbrEntries;
     QString Threshold;
     QString name;
+    QGraphicsScene *scene;
 };
 
 #endif // LEARNINGTOOL_H
