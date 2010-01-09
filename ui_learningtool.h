@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading ui file 'learningtool.ui'
 **
-** Created: Mon Jan 4 22:50:48 2010
+** Created: Sat Jan 9 18:26:56 2010
 **      by: Qt User Interface Compiler version 4.5.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling ui file!
@@ -17,8 +17,6 @@
 #include <QtGui/QGraphicsView>
 #include <QtGui/QHBoxLayout>
 #include <QtGui/QHeaderView>
-#include <QtGui/QLineEdit>
-#include <QtGui/QProgressBar>
 #include <QtGui/QPushButton>
 #include <QtGui/QVBoxLayout>
 #include <QtGui/QWidget>
@@ -31,10 +29,7 @@ public:
     QVBoxLayout *verticalLayout;
     QGraphicsView *perceptron;
     QHBoxLayout *horizontalLayout;
-    QPushButton *browseButton;
-    QLineEdit *pathText;
-    QPushButton *learnButton;
-    QProgressBar *progressBar;
+    QPushButton *feedButton;
 
     void setupUi(QWidget *LearningTool)
     {
@@ -50,29 +45,13 @@ public:
 
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
-        browseButton = new QPushButton(LearningTool);
-        browseButton->setObjectName(QString::fromUtf8("browseButton"));
+        feedButton = new QPushButton(LearningTool);
+        feedButton->setObjectName(QString::fromUtf8("feedButton"));
 
-        horizontalLayout->addWidget(browseButton);
-
-        pathText = new QLineEdit(LearningTool);
-        pathText->setObjectName(QString::fromUtf8("pathText"));
-
-        horizontalLayout->addWidget(pathText);
-
-        learnButton = new QPushButton(LearningTool);
-        learnButton->setObjectName(QString::fromUtf8("learnButton"));
-
-        horizontalLayout->addWidget(learnButton);
+        horizontalLayout->addWidget(feedButton);
 
 
         verticalLayout->addLayout(horizontalLayout);
-
-        progressBar = new QProgressBar(LearningTool);
-        progressBar->setObjectName(QString::fromUtf8("progressBar"));
-        progressBar->setValue(24);
-
-        verticalLayout->addWidget(progressBar);
 
 
         retranslateUi(LearningTool);
@@ -83,8 +62,7 @@ public:
     void retranslateUi(QWidget *LearningTool)
     {
         LearningTool->setWindowTitle(QApplication::translate("LearningTool", "Learning Tool", 0, QApplication::UnicodeUTF8));
-        browseButton->setText(QApplication::translate("LearningTool", "Browse...", 0, QApplication::UnicodeUTF8));
-        learnButton->setText(QApplication::translate("LearningTool", "Learn", 0, QApplication::UnicodeUTF8));
+        feedButton->setText(QApplication::translate("LearningTool", "Feed", 0, QApplication::UnicodeUTF8));
         Q_UNUSED(LearningTool);
     } // retranslateUi
 

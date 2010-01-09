@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Neurds</string>
   </property>
   <widget class="QWidget" name="centralWidget">
    <layout class="QVBoxLayout" name="verticalLayout"/>
@@ -51,7 +51,7 @@
   <action name="actionNetWorkManager">
    <property name="icon">
     <iconset resource="resources.qrc">
-     <normaloff>:/img/tree.png</normaloff>:/img/tree.png</iconset>
+     <normaloff>:/img/config.png</normaloff>:/img/config.png</iconset>
    </property>
    <property name="text">
     <string>NetWorkManager</string>

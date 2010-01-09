@@ -4,5 +4,6 @@
         <file>add.png</file>
         <file>tree.png</file>
         <file>chart.png</file>
+        <file>config.png</file>
     </qresource>
 </RCC>

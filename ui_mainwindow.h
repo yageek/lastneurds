@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading ui file 'mainwindow.ui'
 **
-** Created: Mon Jan 4 14:45:04 2010
+** Created: Sat Jan 9 18:26:56 2010
 **      by: Qt User Interface Compiler version 4.5.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling ui file!
@@ -48,7 +48,7 @@ public:
         actionNetWorkManager = new QAction(MainWindow);
         actionNetWorkManager->setObjectName(QString::fromUtf8("actionNetWorkManager"));
         QIcon icon;
-        icon.addFile(QString::fromUtf8(":/img/tree.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon.addFile(QString::fromUtf8(":/img/config.png"), QSize(), QIcon::Normal, QIcon::Off);
         actionNetWorkManager->setIcon(icon);
         actionChart = new QAction(MainWindow);
         actionChart->setObjectName(QString::fromUtf8("actionChart"));
@@ -87,7 +87,7 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", 0, QApplication::UnicodeUTF8));
+        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "Neurds", 0, QApplication::UnicodeUTF8));
         action_Quitter->setText(QApplication::translate("MainWindow", "&Quit", 0, QApplication::UnicodeUTF8));
         actionNetWorkManager->setText(QApplication::translate("MainWindow", "NetWorkManager", 0, QApplication::UnicodeUTF8));
 #ifndef QT_NO_TOOLTIP
