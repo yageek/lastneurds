@@ -15,7 +15,8 @@ SOURCES += main.cpp \
     networkmanager.cpp \
     setupnewnetwork.cpp \
     learningtool.cpp \
-    neuroneitem.cpp
+    neuroneitem.cpp \
+    entryitem.cpp
 HEADERS += mainwindow.h \
     Network.h \
     Truth.h \
@@ -26,7 +27,8 @@ HEADERS += mainwindow.h \
     networkmanager.h \
     setupnewnetwork.h \
     learningtool.h \
-    neuroneitem.h
+    neuroneitem.h \
+    entryitem.h
 FORMS += mainwindow.ui \
     networkmanager.ui \
     setupnewnetwork.ui \
