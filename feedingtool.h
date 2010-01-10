@@ -17,6 +17,7 @@ protected:
     void subTruth();
     void updateTruth();
     void getExemple();
+
  private:
     int NbrEntries;
     int NbrNeurons;

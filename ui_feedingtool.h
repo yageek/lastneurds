@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading ui file 'feedingtool.ui'
 **
-** Created: Sun Jan 10 15:32:00 2010
+** Created: Sun Jan 10 16:32:03 2010
 **      by: Qt User Interface Compiler version 4.5.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling ui file!
@@ -34,6 +34,7 @@ public:
     QHBoxLayout *horizontalLayout;
     QToolButton *addButton;
     QToolButton *subButton;
+    QToolButton *editButton;
     QLabel *label;
     QSpinBox *iteration;
     QPushButton *learnButton;
@@ -65,6 +66,14 @@ public:
         subButton->setIcon(icon1);
 
         horizontalLayout->addWidget(subButton);
+
+        editButton = new QToolButton(FeedingTool);
+        editButton->setObjectName(QString::fromUtf8("editButton"));
+        QIcon icon2;
+        icon2.addFile(QString::fromUtf8(":/img/edit.png"), QSize(), QIcon::Normal, QIcon::Off);
+        editButton->setIcon(icon2);
+
+        horizontalLayout->addWidget(editButton);
 
         label = new QLabel(FeedingTool);
         label->setObjectName(QString::fromUtf8("label"));
@@ -102,6 +111,7 @@ public:
 
         retranslateUi(FeedingTool);
         QObject::connect(addButton, SIGNAL(clicked()), FeedingTool, SLOT(getExemple()));
+        QObject::connect(subButton, SIGNAL(clicked()), FeedingTool, SLOT(subTruth()));
 
         QMetaObject::connectSlotsByName(FeedingTool);
     } // setupUi
@@ -111,6 +121,7 @@ public:
         FeedingTool->setWindowTitle(QApplication::translate("FeedingTool", "Feeding Tool", 0, QApplication::UnicodeUTF8));
         addButton->setText(QApplication::translate("FeedingTool", "...", 0, QApplication::UnicodeUTF8));
         subButton->setText(QApplication::translate("FeedingTool", "...", 0, QApplication::UnicodeUTF8));
+        editButton->setText(QApplication::translate("FeedingTool", "...", 0, QApplication::UnicodeUTF8));
         label->setText(QApplication::translate("FeedingTool", "Iterations", 0, QApplication::UnicodeUTF8));
         learnButton->setText(QApplication::translate("FeedingTool", "Learning", 0, QApplication::UnicodeUTF8));
         Q_UNUSED(FeedingTool);

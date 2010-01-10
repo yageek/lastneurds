@@ -49,6 +49,7 @@ if(index > -1){
 this->tableTruth.erase(this->tableTruth.begin()+index);//efface le tableau logique
 this->truthTable->removeRow(index);
 }
+this->updateTruth();
 }
 
 void FeedingTool::updateTruth(){
@@ -67,3 +68,4 @@ connect(exemple,SIGNAL(ValidateTruth(Truth)),this,SLOT(addTruth(Truth)));
 
 
 }
+
