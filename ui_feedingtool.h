@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading ui file 'feedingtool.ui'
 **
-** Created: Sun Jan 10 16:32:03 2010
+** Created: Sun Jan 10 17:29:45 2010
 **      by: Qt User Interface Compiler version 4.5.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling ui file!
@@ -112,6 +112,7 @@ public:
         retranslateUi(FeedingTool);
         QObject::connect(addButton, SIGNAL(clicked()), FeedingTool, SLOT(getExemple()));
         QObject::connect(subButton, SIGNAL(clicked()), FeedingTool, SLOT(subTruth()));
+        QObject::connect(editButton, SIGNAL(clicked()), FeedingTool, SLOT(editExemple()));
 
         QMetaObject::connectSlotsByName(FeedingTool);
     } // setupUi

@@ -32,7 +32,7 @@ void EditExemple::sendTruth(){
 
 vector<float> Entries;
 float output = this->outputValue->value();
-for (int i = 0; i < this->NbrEntries;i++){
+for (int i = 0; i < this->entriesTable->rowCount();i++){
     Entries.push_back(this->entriesTable->item(i,0)->text().toFloat());
 
 }

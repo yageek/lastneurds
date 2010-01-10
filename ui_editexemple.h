@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading ui file 'editexemple.ui'
 **
-** Created: Sun Jan 10 17:19:12 2010
+** Created: Sun Jan 10 17:29:45 2010
 **      by: Qt User Interface Compiler version 4.5.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling ui file!
@@ -72,6 +72,7 @@ public:
 
 
         retranslateUi(EditExemple);
+        QObject::connect(pushButton, SIGNAL(clicked()), EditExemple, SLOT(sendTruth()));
 
         QMetaObject::connectSlotsByName(EditExemple);
     } // setupUi

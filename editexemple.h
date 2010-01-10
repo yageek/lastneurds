@@ -8,7 +8,7 @@ class EditExemple : public QWidget, private Ui::EditExemple {
 public:
     EditExemple(int,Truth,QWidget *parent = 0);
 signals:
-    EditedTruth(Truth);
+    void EditedTruth(Truth);
 protected:
     void changeEvent(QEvent *e);
 public slots:

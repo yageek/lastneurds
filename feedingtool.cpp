@@ -74,7 +74,7 @@ void FeedingTool::editExemple(){
     int index = this->truthTable->currentRow();
     if( index> -1){
 
-    EditExemple *edit = new EditExemple(index,this->tableTruth.at(i));
+    EditExemple *edit = new EditExemple(index,this->tableTruth.at(index));
     edit->setVisible(true);
 
     }
