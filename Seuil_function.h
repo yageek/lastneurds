@@ -19,4 +19,5 @@ float Seuil_Heavside(float in);
 float Seuil_Sigmoide(float in);
 float TangenteH(float in);
 float DerivatedTangenteH(float in);
+int hasard(int min, int max);
  }

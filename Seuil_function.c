@@ -14,6 +14,7 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor Boston, MA 02110-1301,  USA
  */
 #include<math.h>
+#include<stdlib.h>
  float Seuil_Heavside(float in){
 if (in >= 0) return 1.0; else return 0.0;
 
@@ -36,4 +37,7 @@ float DerivatedTangenteH(float in){
 
  return (1- TangenteH(in)*TangenteH(in)  );
 
+}
+int hasard(int min, int max){
+return (int) (min + ((float) rand() / RAND_MAX * (max - min + 1)));
 }

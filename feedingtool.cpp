@@ -1,6 +1,7 @@
 #include "feedingtool.h"
 #include "addexemple.h"
 #include <iostream>
+
 #include "editexemple.h"
 #include "Neurone.h"
 #include "Seuil_function.h"
@@ -96,12 +97,36 @@ int iterations = this->iteration->value();
 //On crée un tableau de perceptron
 vector<Neurone*> *perceptron = new vector<Neurone*>();
 Neurone * temp;
+Neurone * output = new Neurone();
+Net *net_output = new Net();
+net_output->Link(output,NULL);
+Net *net_temp;
 for(unsigned int i = 0; i < this->NbrNeurons;i++){
     temp = new Neurone();
     temp->setSeuilFunction(TangenteH);
     temp->setSeuilDerivatedFunction(DerivatedTangenteH);
     temp->setW_0(0.5);
+    perceptron->push_back(temp);
+    //On connecte chaque neurone au neurone de fin
+    net_temp = new Net;
+    net_temp->setWeight(hasard(-1,1));
+    net_temp->Link(temp,NULL);
+    }
+
+//On crée les entrées et on les connectes aux neurones
+for (unsigned int i = 0; i < this->NbrEntries;i++){
+net_temp = new Net;
+net_temp->setWeight(hasard(-1,1));
+
+    //Connection
+for (unsigned int j =0; j < this->NbrNeurons;j++){
+
+    net_temp->Link(NULL,perceptron->at(j));
 
 }
+
+}
+
+
 
 }
