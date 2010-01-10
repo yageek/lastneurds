@@ -18,6 +18,7 @@ protected:
     void updateTruth();
     void getExemple();
     void editExemple();
+    void ChangeTruth(unsigned int,Truth);
 
  private:
     int NbrEntries;

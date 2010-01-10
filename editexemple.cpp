@@ -37,6 +37,6 @@ for (int i = 0; i < this->entriesTable->rowCount();i++){
 
 }
 Truth truth(Entries,output);
-emit EditedTruth(truth);
+emit EditedTruth(this->index,truth);
 this->close();
 }

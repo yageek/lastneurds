@@ -76,7 +76,14 @@ void FeedingTool::editExemple(){
 
     EditExemple *edit = new EditExemple(index,this->tableTruth.at(index));
     edit->setVisible(true);
-
+connect(edit,SIGNAL(EditedTruth(uint,Truth)),this,SLOT(ChangeTruth(unsigned int,Truth)));
     }
+
+
+}
+void FeedingTool::ChangeTruth(unsigned int index,Truth exemple){
+this->tableTruth.at(index) = exemple;
+this->updateTruth();
+
 
 }
