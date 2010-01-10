@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading ui file 'editexemple.ui'
 **
-** Created: Sun Jan 10 17:29:45 2010
+** Created: Sun Jan 10 17:33:26 2010
 **      by: Qt User Interface Compiler version 4.5.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling ui file!
@@ -39,6 +39,7 @@ public:
     {
         if (EditExemple->objectName().isEmpty())
             EditExemple->setObjectName(QString::fromUtf8("EditExemple"));
+        EditExemple->setWindowModality(Qt::WindowModal);
         EditExemple->resize(400, 300);
         verticalLayout = new QVBoxLayout(EditExemple);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));

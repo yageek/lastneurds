@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading ui file 'addexemple.ui'
 **
-** Created: Sun Jan 10 15:41:35 2010
+** Created: Sun Jan 10 17:32:12 2010
 **      by: Qt User Interface Compiler version 4.5.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling ui file!
@@ -39,7 +39,7 @@ public:
     {
         if (AddExemple->objectName().isEmpty())
             AddExemple->setObjectName(QString::fromUtf8("AddExemple"));
-        AddExemple->setWindowModality(Qt::ApplicationModal);
+        AddExemple->setWindowModality(Qt::WindowModal);
         AddExemple->resize(400, 300);
         verticalLayout = new QVBoxLayout(AddExemple);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
