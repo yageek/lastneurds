@@ -40,7 +40,7 @@ int hauteur = std::max(NbrEntries,NbrNeurons)*40;
 int yMin = (hauteur - std::min(NbrEntries,NbrNeurons)*40)/2;
 int yNeurons;
 int yEntries;
-int xNeurons = largeur - 50;
+int xNeurons = largeur - 100;
 int xEntry = 50;
 if(std::max(NbrEntries,NbrNeurons) == NbrNeurons) {
     yEntries = yMin + 60;
@@ -73,6 +73,12 @@ text->setPos(xEntry - 10, 20);
 text = this->scene->addText(QString("Network name : ").append(name));
 text->setPos(0, 0);
 
+//Neurones de sortie
+item = new NeuroneItem;
+this->scene->addItem(item);
+item->setPos(largeur - 10,hauteur/2 + 50);
+text = this->scene->addText(QString("Output"));
+text->setPos(largeur-15,hauteur/2 + 20);
 
 f.setPixelSize(10);
 for (int i = 0; i < NbrNeurons;i++){
@@ -83,7 +89,9 @@ for (int i = 0; i < NbrNeurons;i++){
 
     //Dessin de l'index
     text = this->scene->addText(QString::number(i+1),f);
-    text->setPos(xNeurons + 30,i*40 + yNeurons);
+    text->setPos(xNeurons,i*40 + yNeurons - 20);
+
+    this->scene->addLine(xNeurons+10,i*40 + yNeurons+10,largeur,hauteur/2 + 60);
 }
 //entry
 for (int i = 0;i < NbrEntries;i++){
@@ -97,7 +105,7 @@ text = this->scene->addText(QString::number(i+1),f);
 
 }
 
-//lien
+//lien neurones entrées
 for (int i = 0; i < NbrEntries;i++){
 
     for (int j = 0; j < NbrNeurons;j++){
@@ -106,6 +114,10 @@ this->scene->addLine(xEntry+5,i*40 + yEntries+5,xNeurons+10,j*40 + yNeurons+10);
     }
 
 }
+
+
+
+
 
 this->perceptron->setScene(this->scene);
 }

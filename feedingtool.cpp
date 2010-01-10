@@ -2,6 +2,8 @@
 #include "addexemple.h"
 #include <iostream>
 #include "editexemple.h"
+#include "Neurone.h"
+#include "Seuil_function.h"
 FeedingTool::FeedingTool(QWidget *parent) :
     QWidget(parent){
     setupUi(this);
@@ -85,5 +87,21 @@ void FeedingTool::ChangeTruth(unsigned int index,Truth exemple){
 this->tableTruth.at(index) = exemple;
 this->updateTruth();
 
+
+}
+
+void FeedingTool::Learning(){
+
+int iterations = this->iteration->value();
+//On crée un tableau de perceptron
+vector<Neurone*> *perceptron = new vector<Neurone*>();
+Neurone * temp;
+for(unsigned int i = 0; i < this->NbrNeurons;i++){
+    temp = new Neurone();
+    temp->setSeuilFunction(TangenteH);
+    temp->setSeuilDerivatedFunction(DerivatedTangenteH);
+    temp->setW_0(0.5);
+
+}
 
 }

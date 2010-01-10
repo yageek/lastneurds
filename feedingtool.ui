@@ -9,7 +9,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
+    <width>476</width>
     <height>300</height>
    </rect>
   </property>
@@ -65,6 +65,16 @@
         <number>1</number>
        </property>
       </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>Learning rate</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QDoubleSpinBox" name="spinLearningrate"/>
      </item>
      <item>
       <widget class="QPushButton" name="learnButton">
@@ -144,10 +154,27 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>learnButton</sender>
+   <signal>clicked()</signal>
+   <receiver>FeedingTool</receiver>
+   <slot>Learning()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>343</x>
+     <y>17</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>253</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>getExemple()</slot>
   <slot>subTruth()</slot>
   <slot>editExemple()</slot>
+  <slot>Learning()</slot>
  </slots>
 </ui>

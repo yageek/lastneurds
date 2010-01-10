@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'feedingtool.h'
 **
-** Created: Sun Jan 10 18:18:19 2010
+** Created: Sun Jan 10 19:13:27 2010
 **      by: The Qt Meta Object Compiler version 61 (Qt 4.5.2)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,7 +23,7 @@ static const uint qt_meta_data_FeedingTool[] = {
        2,       // revision
        0,       // classname
        0,    0, // classinfo
-       6,   12, // methods
+       7,   12, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -35,6 +35,7 @@ static const uint qt_meta_data_FeedingTool[] = {
       54,   12,   12,   12, 0x0a,
       67,   12,   12,   12, 0x0a,
       83,   81,   12,   12, 0x0a,
+     107,   12,   12,   12, 0x0a,
 
        0        // eod
 };
@@ -42,7 +43,7 @@ static const uint qt_meta_data_FeedingTool[] = {
 static const char qt_meta_stringdata_FeedingTool[] = {
     "FeedingTool\0\0addTruth(Truth)\0subTruth()\0"
     "updateTruth()\0getExemple()\0editExemple()\0"
-    ",\0ChangeTruth(uint,Truth)\0"
+    ",\0ChangeTruth(uint,Truth)\0Learning()\0"
 };
 
 const QMetaObject FeedingTool::staticMetaObject = {
@@ -76,9 +77,10 @@ int FeedingTool::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 3: getExemple(); break;
         case 4: editExemple(); break;
         case 5: ChangeTruth((*reinterpret_cast< uint(*)>(_a[1])),(*reinterpret_cast< Truth(*)>(_a[2]))); break;
+        case 6: Learning(); break;
         default: ;
         }
-        _id -= 6;
+        _id -= 7;
     }
     return _id;
 }

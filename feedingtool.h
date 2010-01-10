@@ -19,6 +19,7 @@ protected:
     void getExemple();
     void editExemple();
     void ChangeTruth(unsigned int,Truth);
+    void Learning();
 
  private:
     int NbrEntries;

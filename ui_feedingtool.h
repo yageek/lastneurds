@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading ui file 'feedingtool.ui'
 **
-** Created: Sun Jan 10 17:29:45 2010
+** Created: Sun Jan 10 19:13:21 2010
 **      by: Qt User Interface Compiler version 4.5.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling ui file!
@@ -14,6 +14,7 @@
 #include <QtGui/QAction>
 #include <QtGui/QApplication>
 #include <QtGui/QButtonGroup>
+#include <QtGui/QDoubleSpinBox>
 #include <QtGui/QHBoxLayout>
 #include <QtGui/QHeaderView>
 #include <QtGui/QLabel>
@@ -37,6 +38,8 @@ public:
     QToolButton *editButton;
     QLabel *label;
     QSpinBox *iteration;
+    QLabel *label_2;
+    QDoubleSpinBox *spinLearningrate;
     QPushButton *learnButton;
     QTableWidget *truthTable;
     QProgressBar *progressBar;
@@ -46,7 +49,7 @@ public:
         if (FeedingTool->objectName().isEmpty())
             FeedingTool->setObjectName(QString::fromUtf8("FeedingTool"));
         FeedingTool->setWindowModality(Qt::ApplicationModal);
-        FeedingTool->resize(400, 300);
+        FeedingTool->resize(476, 300);
         verticalLayout = new QVBoxLayout(FeedingTool);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         horizontalLayout = new QHBoxLayout();
@@ -86,6 +89,16 @@ public:
 
         horizontalLayout->addWidget(iteration);
 
+        label_2 = new QLabel(FeedingTool);
+        label_2->setObjectName(QString::fromUtf8("label_2"));
+
+        horizontalLayout->addWidget(label_2);
+
+        spinLearningrate = new QDoubleSpinBox(FeedingTool);
+        spinLearningrate->setObjectName(QString::fromUtf8("spinLearningrate"));
+
+        horizontalLayout->addWidget(spinLearningrate);
+
         learnButton = new QPushButton(FeedingTool);
         learnButton->setObjectName(QString::fromUtf8("learnButton"));
 
@@ -113,6 +126,7 @@ public:
         QObject::connect(addButton, SIGNAL(clicked()), FeedingTool, SLOT(getExemple()));
         QObject::connect(subButton, SIGNAL(clicked()), FeedingTool, SLOT(subTruth()));
         QObject::connect(editButton, SIGNAL(clicked()), FeedingTool, SLOT(editExemple()));
+        QObject::connect(learnButton, SIGNAL(clicked()), FeedingTool, SLOT(Learning()));
 
         QMetaObject::connectSlotsByName(FeedingTool);
     } // setupUi
@@ -124,6 +138,7 @@ public:
         subButton->setText(QApplication::translate("FeedingTool", "...", 0, QApplication::UnicodeUTF8));
         editButton->setText(QApplication::translate("FeedingTool", "...", 0, QApplication::UnicodeUTF8));
         label->setText(QApplication::translate("FeedingTool", "Iterations", 0, QApplication::UnicodeUTF8));
+        label_2->setText(QApplication::translate("FeedingTool", "Learning rate", 0, QApplication::UnicodeUTF8));
         learnButton->setText(QApplication::translate("FeedingTool", "Learning", 0, QApplication::UnicodeUTF8));
         Q_UNUSED(FeedingTool);
     } // retranslateUi
