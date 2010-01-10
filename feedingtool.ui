@@ -128,9 +128,26 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>editButton</sender>
+   <signal>clicked()</signal>
+   <receiver>FeedingTool</receiver>
+   <slot>editExemple()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>73</x>
+     <y>28</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>181</x>
+     <y>39</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>getExemple()</slot>
   <slot>subTruth()</slot>
+  <slot>editExemple()</slot>
  </slots>
 </ui>

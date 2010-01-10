@@ -17,6 +17,7 @@ protected:
     void subTruth();
     void updateTruth();
     void getExemple();
+    void editExemple();
 
  private:
     int NbrEntries;

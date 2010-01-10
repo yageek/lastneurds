@@ -1,6 +1,7 @@
 #include "feedingtool.h"
 #include "addexemple.h"
 #include <iostream>
+#include "editexemple.h"
 FeedingTool::FeedingTool(QWidget *parent) :
     QWidget(parent){
     setupUi(this);
@@ -69,3 +70,13 @@ connect(exemple,SIGNAL(ValidateTruth(Truth)),this,SLOT(addTruth(Truth)));
 
 }
 
+void FeedingTool::editExemple(){
+    int index = this->truthTable->currentRow();
+    if( index> -1){
+
+    EditExemple *edit = new EditExemple(index,this->tableTruth.at(i));
+    edit->setVisible(true);
+
+    }
+
+}

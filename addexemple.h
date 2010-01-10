@@ -7,12 +7,14 @@ class AddExemple : public QWidget, private Ui::AddExemple {
     Q_OBJECT
 public:
     AddExemple(int NBrEntries,QWidget *parent = 0);
+    void setupTruth(Truth,int);
 public slots:
         void sendTruth();
 protected:
     void changeEvent(QEvent *e);
 signals:
     void ValidateTruth(Truth);
+
  private:
     int NbrEntries;
 };
