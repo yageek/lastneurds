@@ -1,5 +1,6 @@
 #include "feedingtool.h"
-
+#include "addexemple.h"
+#include <iostream>
 FeedingTool::FeedingTool(QWidget *parent) :
     QWidget(parent){
     setupUi(this);
@@ -13,7 +14,7 @@ this->name = name;
 
 QHeaderView * header = this->truthTable->horizontalHeader();
 QStringList list ;
-list << "Index" << "Name";
+list << "List of exemples";
 this->truthTable->setHorizontalHeaderLabels(list);
 header->setResizeMode(QHeaderView::Stretch);
 header->setStretchLastSection(true);
@@ -35,4 +36,34 @@ void FeedingTool::changeEvent(QEvent *e)
     default:
         break;
     }
+}
+
+void FeedingTool::addTruth(Truth exemple){
+this->tableTruth.push_back(exemple);
+this->updateTruth();
+}
+void FeedingTool::subTruth(){
+
+int index = this->truthTable->currentRow();
+if(index > -1){
+this->tableTruth.erase(this->tableTruth.begin()+index);//efface le tableau logique
+this->truthTable->removeRow(index);
+}
+}
+
+void FeedingTool::updateTruth(){
+this->truthTable->setRowCount(this->tableTruth.size());
+this->truthTable->clearContents();
+for (unsigned int i =0; i < this->tableTruth.size();i++){
+this->truthTable->setItem(i,0,new QTableWidgetItem(QString("Exemple : ").append(QString::number(i+1))));
+
+}
+}
+
+void FeedingTool::getExemple(){
+AddExemple *exemple = new AddExemple(this->NbrEntries);
+exemple->setVisible(true);
+connect(exemple,SIGNAL(ValidateTruth(Truth)),this,SLOT(addTruth(Truth)));
+
+
 }

@@ -67,16 +67,15 @@
    <item>
     <widget class="QTableWidget" name="truthTable">
      <property name="columnCount">
-      <number>2</number>
+      <number>1</number>
      </property>
-     <column/>
      <column/>
     </widget>
    </item>
    <item>
     <widget class="QProgressBar" name="progressBar">
      <property name="value">
-      <number>24</number>
+      <number>0</number>
      </property>
     </widget>
    </item>
@@ -85,5 +84,25 @@
  <resources>
   <include location="resources.qrc"/>
  </resources>
- <connections/>
+ <connections>
+  <connection>
+   <sender>addButton</sender>
+   <signal>clicked()</signal>
+   <receiver>FeedingTool</receiver>
+   <slot>getExemple()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>19</x>
+     <y>29</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>52</x>
+     <y>40</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>getExemple()</slot>
+ </slots>
 </ui>

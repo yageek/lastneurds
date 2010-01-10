@@ -17,7 +17,8 @@ SOURCES += main.cpp \
     learningtool.cpp \
     neuroneitem.cpp \
     entryitem.cpp \
-    feedingtool.cpp
+    feedingtool.cpp \
+    addexemple.cpp
 HEADERS += mainwindow.h \
     Network.h \
     Truth.h \
@@ -30,10 +31,12 @@ HEADERS += mainwindow.h \
     learningtool.h \
     neuroneitem.h \
     entryitem.h \
-    feedingtool.h
+    feedingtool.h \
+    addexemple.h
 FORMS += mainwindow.ui \
     networkmanager.ui \
     setupnewnetwork.ui \
     learningtool.ui \
-    feedingtool.ui
+    feedingtool.ui \
+    addexemple.ui
 RESOURCES += resources.qrc

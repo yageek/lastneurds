@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading ui file 'feedingtool.ui'
 **
-** Created: Sun Jan 10 14:06:29 2010
+** Created: Sun Jan 10 15:32:00 2010
 **      by: Qt User Interface Compiler version 4.5.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling ui file!
@@ -86,21 +86,22 @@ public:
         verticalLayout->addLayout(horizontalLayout);
 
         truthTable = new QTableWidget(FeedingTool);
-        if (truthTable->columnCount() < 2)
-            truthTable->setColumnCount(2);
+        if (truthTable->columnCount() < 1)
+            truthTable->setColumnCount(1);
         truthTable->setObjectName(QString::fromUtf8("truthTable"));
-        truthTable->setColumnCount(2);
+        truthTable->setColumnCount(1);
 
         verticalLayout->addWidget(truthTable);
 
         progressBar = new QProgressBar(FeedingTool);
         progressBar->setObjectName(QString::fromUtf8("progressBar"));
-        progressBar->setValue(24);
+        progressBar->setValue(0);
 
         verticalLayout->addWidget(progressBar);
 
 
         retranslateUi(FeedingTool);
+        QObject::connect(addButton, SIGNAL(clicked()), FeedingTool, SLOT(getExemple()));
 
         QMetaObject::connectSlotsByName(FeedingTool);
     } // setupUi
