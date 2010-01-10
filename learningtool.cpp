@@ -50,7 +50,8 @@ if(std::max(NbrEntries,NbrNeurons) == NbrNeurons) {
     yNeurons = yMin + 60;
     yEntries = 60;
 }
-this->setWindowTitle(name);
+this->setWindowTitle(QString("Viewing : ").append(name));
+this->setFixedSize(700,500);
 this->scene = new QGraphicsScene();
 this->scene->setSceneRect(0,0,largeur,hauteur+100);
 

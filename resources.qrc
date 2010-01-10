@@ -5,5 +5,7 @@
         <file>tree.png</file>
         <file>chart.png</file>
         <file>config.png</file>
+        <file>view.png</file>
+        <file>wizard.png</file>
     </qresource>
 </RCC>

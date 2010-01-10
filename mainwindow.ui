@@ -41,6 +41,7 @@
     <bool>false</bool>
    </attribute>
    <addaction name="actionNetWorkManager"/>
+   <addaction name="actionFeedWizard"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
   <action name="action_Quitter">
@@ -51,7 +52,7 @@
   <action name="actionNetWorkManager">
    <property name="icon">
     <iconset resource="resources.qrc">
-     <normaloff>:/img/config.png</normaloff>:/img/config.png</iconset>
+     <normaloff>:/img/view.png</normaloff>:/img/view.png</iconset>
    </property>
    <property name="text">
     <string>NetWorkManager</string>
@@ -67,6 +68,15 @@
    </property>
    <property name="text">
     <string>Chart</string>
+   </property>
+  </action>
+  <action name="actionFeedWizard">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/img/wizard.png</normaloff>:/img/wizard.png</iconset>
+   </property>
+   <property name="text">
+    <string>FeedWizard</string>
    </property>
   </action>
  </widget>

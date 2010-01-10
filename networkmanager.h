@@ -15,6 +15,7 @@ protected:
     void SubNetWork();
     void InsertRow(int NbrNeurons,int NbrEntries,int Index, QString name);
     void LaunchLearningTool();
+    void LaunchFeedingTool();
 };
 
 #endif // NETWORKMANAGER_H

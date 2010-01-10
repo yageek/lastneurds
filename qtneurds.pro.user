@@ -62,37 +62,65 @@
   <valuemap type="QVariantMap" >
    <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString" >Debug</value>
    <valuelist key="abstractProcess.Environment" type="QVariantList" >
-    <value type="QString" >DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-CPlzJFIkfl,guid=199884c78cb866fd64ca606e4b424483</value>
+    <value type="QString" >ALLIANCE_TOP=/opt/alliance</value>
+    <value type="QString" >DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-mStMj3Zz8E,guid=831912caf03f6d70002f10c64b488895</value>
     <value type="QString" >DESKTOP_SESSION=gnome</value>
     <value type="QString" >DESKTOP_STARTUP_ID=</value>
     <value type="QString" >DISPLAY=:0.0</value>
+    <value type="QString" >DREAL_TECHNO_NAME=/opt/alliance/etc/cmos.dreal</value>
+    <value type="QString" >ELP_TECHNO_NAME=/opt/alliance/etc/prol.elp</value>
     <value type="QString" >GDMSESSION=gnome</value>
     <value type="QString" >GDM_KEYBOARD_LAYOUT=fr	oss</value>
     <value type="QString" >GDM_LANG=fr_FR.UTF-8</value>
+    <value type="QString" >GENVIEW_TECHNO_NAME=/opt/alliance/etc/cmos.genview</value>
     <value type="QString" >GNOME_DESKTOP_SESSION_ID=this-is-deprecated</value>
-    <value type="QString" >GNOME_KEYRING_PID=1397</value>
-    <value type="QString" >GNOME_KEYRING_SOCKET=/tmp/keyring-fOzv6P/socket</value>
+    <value type="QString" >GNOME_KEYRING_PID=1758</value>
+    <value type="QString" >GNOME_KEYRING_SOCKET=/tmp/keyring-CKx9E3/socket</value>
+    <value type="QString" >GRAAL_TECHNO_NAME=/opt/alliance/etc/cmos.graal</value>
     <value type="QString" >GTK_MODULES=canberra-gtk-module</value>
     <value type="QString" >GTK_RC_FILES=/etc/gtk/gtkrc:/home/yaya/.gtkrc-1.2-gnome2</value>
     <value type="QString" >HOME=/home/yaya</value>
     <value type="QString" >LANG=fr_FR.UTF-8</value>
-    <value type="QString" >LANGUAGE=</value>
     <value type="QString" >LD_LIBRARY_PATH=/usr/lib/qtcreator:</value>
     <value type="QString" >LOGNAME=yaya</value>
+    <value type="QString" >MANPATH=:/opt/alliance/man:/usr/share/man:/opt/alliance/man</value>
+    <value type="QString" >MBK_C4_LIB=./cellsC4</value>
+    <value type="QString" >MBK_CATAL_NAME=CATAL</value>
+    <value type="QString" >MBK_CATA_LIB=.:/opt/alliance/cells/sxlib:/opt/alliance/cells/dp_sxlib:/opt/alliance/cells/rflib:/opt/alliance/cells/rf2lib:/opt/alliance/cells/ramlib:/opt/alliance/cells/romlib:/opt/alliance/cells/pxlib:/opt/alliance/cells/padlib</value>
+    <value type="QString" >MBK_IN_LO=vst</value>
+    <value type="QString" >MBK_IN_PH=ap</value>
+    <value type="QString" >MBK_OUT_LO=vst</value>
+    <value type="QString" >MBK_OUT_PH=ap</value>
+    <value type="QString" >MBK_SCALE_X=100</value>
+    <value type="QString" >MBK_SPI_MODEL=/opt/alliance/etc/spimodel.cfg</value>
+    <value type="QString" >MBK_TARGET_LIB=/opt/alliance/cells/sxlib</value>
+    <value type="QString" >MBK_VDD=vdd</value>
+    <value type="QString" >MBK_VSS=vss</value>
+    <value type="QString" >MBK_WORK_LIB=.</value>
     <value type="QString" >ORBIT_SOCKETDIR=/tmp/orbit-yaya</value>
-    <value type="QString" >PATH=/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games</value>
+    <value type="QString" >PATH=/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/opt/alliance/bin</value>
     <value type="QString" >PWD=/home/yaya</value>
     <value type="QString" >QTDIR=/usr</value>
-    <value type="QString" >SESSION_MANAGER=local/yaya-laptop:@/tmp/.ICE-unix/1422,unix/yaya-laptop:/tmp/.ICE-unix/1422</value>
+    <value type="QString" >RDS_IN=cif</value>
+    <value type="QString" >RDS_OUT=cif</value>
+    <value type="QString" >RDS_TECHNO_NAME=/opt/alliance/etc/cmos.rds</value>
+    <value type="QString" >SESSION_MANAGER=local/yaya-laptop:@/tmp/.ICE-unix/1773,unix/yaya-laptop:/tmp/.ICE-unix/1773</value>
     <value type="QString" >SHELL=/bin/bash</value>
     <value type="QString" >SPEECHD_PORT=7560</value>
-    <value type="QString" >SSH_AGENT_PID=1486</value>
-    <value type="QString" >SSH_AUTH_SOCK=/tmp/keyring-fOzv6P/socket.ssh</value>
+    <value type="QString" >SSH_AGENT_PID=1838</value>
+    <value type="QString" >SSH_AUTH_SOCK=/tmp/keyring-CKx9E3/socket.ssh</value>
     <value type="QString" >USER=yaya</value>
     <value type="QString" >USERNAME=yaya</value>
-    <value type="QString" >XAUTHORITY=/var/run/gdm/auth-for-yaya-QxOaOh/database</value>
+    <value type="QString" >VH_BEHSFX=vbe</value>
+    <value type="QString" >VH_DLYSFX=dly</value>
+    <value type="QString" >VH_MAXERR=10</value>
+    <value type="QString" >VH_PATSFX=pat</value>
+    <value type="QString" >XAUTHORITY=/var/run/gdm/auth-for-yaya-1OSOyY/database</value>
     <value type="QString" >XDG_DATA_DIRS=/usr/share/gnome:/usr/local/share/:/usr/share/</value>
-    <value type="QString" >XDG_SESSION_COOKIE=0250e91bdd13949fa59b26014af1f2dd-1262634114.579954-61886622</value>
+    <value type="QString" >XDG_SESSION_COOKIE=0250e91bdd13949fa59b26014af1f2dd-1263044756.768860-1680535540</value>
+    <value type="QString" >XFSM_PARAM_NAME=/opt/alliance/etc/xfsm.par</value>
+    <value type="QString" >XPAT_PARAM_NAME=/opt/alliance/etc/xpat.par</value>
+    <value type="QString" >XSCH_PARAM_NAME=/opt/alliance/etc/xsch.par</value>
    </valuelist>
    <valuelist key="abstractProcess.arguments" type="QVariantList" >
     <value type="QString" >/home/yaya/NetBeansProjects/qtNeurds/qtneurds/qtneurds.pro</value>
@@ -112,37 +140,65 @@
   <valuemap type="QVariantMap" >
    <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString" >Debug</value>
    <valuelist key="abstractProcess.Environment" type="QVariantList" >
-    <value type="QString" >DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-CPlzJFIkfl,guid=199884c78cb866fd64ca606e4b424483</value>
+    <value type="QString" >ALLIANCE_TOP=/opt/alliance</value>
+    <value type="QString" >DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-mStMj3Zz8E,guid=831912caf03f6d70002f10c64b488895</value>
     <value type="QString" >DESKTOP_SESSION=gnome</value>
     <value type="QString" >DESKTOP_STARTUP_ID=</value>
     <value type="QString" >DISPLAY=:0.0</value>
+    <value type="QString" >DREAL_TECHNO_NAME=/opt/alliance/etc/cmos.dreal</value>
+    <value type="QString" >ELP_TECHNO_NAME=/opt/alliance/etc/prol.elp</value>
     <value type="QString" >GDMSESSION=gnome</value>
     <value type="QString" >GDM_KEYBOARD_LAYOUT=fr	oss</value>
     <value type="QString" >GDM_LANG=fr_FR.UTF-8</value>
+    <value type="QString" >GENVIEW_TECHNO_NAME=/opt/alliance/etc/cmos.genview</value>
     <value type="QString" >GNOME_DESKTOP_SESSION_ID=this-is-deprecated</value>
-    <value type="QString" >GNOME_KEYRING_PID=1397</value>
-    <value type="QString" >GNOME_KEYRING_SOCKET=/tmp/keyring-fOzv6P/socket</value>
+    <value type="QString" >GNOME_KEYRING_PID=1758</value>
+    <value type="QString" >GNOME_KEYRING_SOCKET=/tmp/keyring-CKx9E3/socket</value>
+    <value type="QString" >GRAAL_TECHNO_NAME=/opt/alliance/etc/cmos.graal</value>
     <value type="QString" >GTK_MODULES=canberra-gtk-module</value>
     <value type="QString" >GTK_RC_FILES=/etc/gtk/gtkrc:/home/yaya/.gtkrc-1.2-gnome2</value>
     <value type="QString" >HOME=/home/yaya</value>
     <value type="QString" >LANG=fr_FR.UTF-8</value>
-    <value type="QString" >LANGUAGE=</value>
     <value type="QString" >LD_LIBRARY_PATH=/usr/lib/qtcreator:</value>
     <value type="QString" >LOGNAME=yaya</value>
+    <value type="QString" >MANPATH=:/opt/alliance/man:/usr/share/man:/opt/alliance/man</value>
+    <value type="QString" >MBK_C4_LIB=./cellsC4</value>
+    <value type="QString" >MBK_CATAL_NAME=CATAL</value>
+    <value type="QString" >MBK_CATA_LIB=.:/opt/alliance/cells/sxlib:/opt/alliance/cells/dp_sxlib:/opt/alliance/cells/rflib:/opt/alliance/cells/rf2lib:/opt/alliance/cells/ramlib:/opt/alliance/cells/romlib:/opt/alliance/cells/pxlib:/opt/alliance/cells/padlib</value>
+    <value type="QString" >MBK_IN_LO=vst</value>
+    <value type="QString" >MBK_IN_PH=ap</value>
+    <value type="QString" >MBK_OUT_LO=vst</value>
+    <value type="QString" >MBK_OUT_PH=ap</value>
+    <value type="QString" >MBK_SCALE_X=100</value>
+    <value type="QString" >MBK_SPI_MODEL=/opt/alliance/etc/spimodel.cfg</value>
+    <value type="QString" >MBK_TARGET_LIB=/opt/alliance/cells/sxlib</value>
+    <value type="QString" >MBK_VDD=vdd</value>
+    <value type="QString" >MBK_VSS=vss</value>
+    <value type="QString" >MBK_WORK_LIB=.</value>
     <value type="QString" >ORBIT_SOCKETDIR=/tmp/orbit-yaya</value>
-    <value type="QString" >PATH=/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games</value>
+    <value type="QString" >PATH=/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/opt/alliance/bin</value>
     <value type="QString" >PWD=/home/yaya</value>
     <value type="QString" >QTDIR=/usr</value>
-    <value type="QString" >SESSION_MANAGER=local/yaya-laptop:@/tmp/.ICE-unix/1422,unix/yaya-laptop:/tmp/.ICE-unix/1422</value>
+    <value type="QString" >RDS_IN=cif</value>
+    <value type="QString" >RDS_OUT=cif</value>
+    <value type="QString" >RDS_TECHNO_NAME=/opt/alliance/etc/cmos.rds</value>
+    <value type="QString" >SESSION_MANAGER=local/yaya-laptop:@/tmp/.ICE-unix/1773,unix/yaya-laptop:/tmp/.ICE-unix/1773</value>
     <value type="QString" >SHELL=/bin/bash</value>
     <value type="QString" >SPEECHD_PORT=7560</value>
-    <value type="QString" >SSH_AGENT_PID=1486</value>
-    <value type="QString" >SSH_AUTH_SOCK=/tmp/keyring-fOzv6P/socket.ssh</value>
+    <value type="QString" >SSH_AGENT_PID=1838</value>
+    <value type="QString" >SSH_AUTH_SOCK=/tmp/keyring-CKx9E3/socket.ssh</value>
     <value type="QString" >USER=yaya</value>
     <value type="QString" >USERNAME=yaya</value>
-    <value type="QString" >XAUTHORITY=/var/run/gdm/auth-for-yaya-QxOaOh/database</value>
+    <value type="QString" >VH_BEHSFX=vbe</value>
+    <value type="QString" >VH_DLYSFX=dly</value>
+    <value type="QString" >VH_MAXERR=10</value>
+    <value type="QString" >VH_PATSFX=pat</value>
+    <value type="QString" >XAUTHORITY=/var/run/gdm/auth-for-yaya-1OSOyY/database</value>
     <value type="QString" >XDG_DATA_DIRS=/usr/share/gnome:/usr/local/share/:/usr/share/</value>
-    <value type="QString" >XDG_SESSION_COOKIE=0250e91bdd13949fa59b26014af1f2dd-1262634114.579954-61886622</value>
+    <value type="QString" >XDG_SESSION_COOKIE=0250e91bdd13949fa59b26014af1f2dd-1263044756.768860-1680535540</value>
+    <value type="QString" >XFSM_PARAM_NAME=/opt/alliance/etc/xfsm.par</value>
+    <value type="QString" >XPAT_PARAM_NAME=/opt/alliance/etc/xpat.par</value>
+    <value type="QString" >XSCH_PARAM_NAME=/opt/alliance/etc/xsch.par</value>
    </valuelist>
    <valuelist key="abstractProcess.arguments" type="QVariantList" >
     <value type="QString" >-w</value>

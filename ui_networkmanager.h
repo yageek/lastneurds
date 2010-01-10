@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading ui file 'networkmanager.ui'
 **
-** Created: Mon Jan 4 14:45:04 2010
+** Created: Sat Jan 9 18:41:06 2010
 **      by: Qt User Interface Compiler version 4.5.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling ui file!
@@ -67,11 +67,11 @@ public:
         verticalLayout->addLayout(horizontalLayout);
 
         networkTable = new QTableWidget(NetWorkManager);
-        if (networkTable->columnCount() < 4)
-            networkTable->setColumnCount(4);
+        if (networkTable->columnCount() < 5)
+            networkTable->setColumnCount(5);
         networkTable->setObjectName(QString::fromUtf8("networkTable"));
         networkTable->setRowCount(0);
-        networkTable->setColumnCount(4);
+        networkTable->setColumnCount(5);
 
         verticalLayout->addWidget(networkTable);
 

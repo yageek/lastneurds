@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading ui file 'learningtool.ui'
 **
-** Created: Sat Jan 9 18:26:56 2010
+** Created: Sat Jan 9 18:42:09 2010
 **      by: Qt User Interface Compiler version 4.5.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling ui file!
@@ -15,9 +15,7 @@
 #include <QtGui/QApplication>
 #include <QtGui/QButtonGroup>
 #include <QtGui/QGraphicsView>
-#include <QtGui/QHBoxLayout>
 #include <QtGui/QHeaderView>
-#include <QtGui/QPushButton>
 #include <QtGui/QVBoxLayout>
 #include <QtGui/QWidget>
 
@@ -28,8 +26,6 @@ class Ui_LearningTool
 public:
     QVBoxLayout *verticalLayout;
     QGraphicsView *perceptron;
-    QHBoxLayout *horizontalLayout;
-    QPushButton *feedButton;
 
     void setupUi(QWidget *LearningTool)
     {
@@ -43,16 +39,6 @@ public:
 
         verticalLayout->addWidget(perceptron);
 
-        horizontalLayout = new QHBoxLayout();
-        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
-        feedButton = new QPushButton(LearningTool);
-        feedButton->setObjectName(QString::fromUtf8("feedButton"));
-
-        horizontalLayout->addWidget(feedButton);
-
-
-        verticalLayout->addLayout(horizontalLayout);
-
 
         retranslateUi(LearningTool);
 
@@ -62,7 +48,6 @@ public:
     void retranslateUi(QWidget *LearningTool)
     {
         LearningTool->setWindowTitle(QApplication::translate("LearningTool", "Learning Tool", 0, QApplication::UnicodeUTF8));
-        feedButton->setText(QApplication::translate("LearningTool", "Feed", 0, QApplication::UnicodeUTF8));
         Q_UNUSED(LearningTool);
     } // retranslateUi
 

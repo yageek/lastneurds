@@ -3,6 +3,7 @@
 #include "learningtool.h"
 #include <iostream>
 #include<QMessageBox>
+#include "feedingtool.h"
 NetWorkManager::NetWorkManager(QWidget *parent) :
     QWidget(parent){
     setupUi(this);
@@ -10,7 +11,7 @@ NetWorkManager::NetWorkManager(QWidget *parent) :
     //On met en forme le tout
 QHeaderView * header = this->networkTable->horizontalHeader();
 QStringList list ;
-list << tr("Name") << tr("Neuron") << tr("Entries") << tr("Threshold");
+list << tr("Name") << tr("Neuron") << tr("Entries") << tr("Threshold") << tr("Feed file");
 this->networkTable->setHorizontalHeaderLabels(list);
 header->setResizeMode(QHeaderView::Stretch);
 header->setStretchLastSection(true);
@@ -83,6 +84,25 @@ QString name = this->networkTable->item(currentRow,0)->text();
 QString Threshold = this->networkTable->item(currentRow,3)->text();
 
 LearningTool * learn = new LearningTool(NbrNeurons,NbrEntries,Threshold,name);
+learn->setVisible(true);
+} else {
+   QMessageBox msgBox;
+ msgBox.setText("You have to create and select one network at least.");
+ msgBox.exec();
+}
+}
+void NetWorkManager::LaunchFeedingTool(){
+
+int currentRow = this->networkTable->currentRow();
+
+if(currentRow > -1){
+
+int NbrNeurons = this->networkTable->item(currentRow,1)->text().toInt();
+int NbrEntries = this->networkTable->item(currentRow,2)->text().toInt();
+QString name = this->networkTable->item(currentRow,0)->text();
+QString Threshold = this->networkTable->item(currentRow,3)->text();
+
+FeedingTool * learn = new FeedingTool(NbrNeurons,NbrEntries,Threshold,name);
 learn->setVisible(true);
 } else {
    QMessageBox msgBox;

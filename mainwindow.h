@@ -22,6 +22,8 @@ private:
     NetWorkManager * manager;
 
 
+
+
 };
 
 #endif // MAINWINDOW_H
