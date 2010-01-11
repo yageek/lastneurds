@@ -2,6 +2,9 @@
 <ui version="4.0">
  <class>ErrorView</class>
  <widget class="QWidget" name="ErrorView">
+  <property name="windowModality">
+   <enum>Qt::WindowModal</enum>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -11,11 +14,18 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>Error Evolution</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <widget class="QwtPlot" name="qwtPlot"/>
+   </item>
+   <item>
+    <widget class="QPushButton" name="pushButton">
+     <property name="text">
+      <string>Teste</string>
+     </property>
+    </widget>
    </item>
   </layout>
  </widget>

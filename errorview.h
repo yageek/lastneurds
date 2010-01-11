@@ -9,9 +9,9 @@ class ErrorView : public QWidget, private Ui::ErrorView {
 
   private:
 
-vector<float> errors;
+QVector<double> errors;
 public:
-    ErrorView(vector<float> errors,QWidget *parent = 0);
+    ErrorView(QVector<double>  errors,QWidget *parent = 0);
 
 protected:
     void changeEvent(QEvent *e);

@@ -1,7 +1,7 @@
 #include "feedingtool.h"
 #include "addexemple.h"
 #include <iostream>
-
+#include "errorview.h"
 #include "editexemple.h"
 #include "Neurone.h"
 #include "Seuil_function.h"
@@ -93,6 +93,7 @@ this->updateTruth();
 
 void FeedingTool::Learning(){
 float error =0;
+QVector<double> errors;
 int iterations = this->iteration->value();
 //On crée un tableau de perceptron
 vector<Neurone*> *perceptron = new vector<Neurone*>();
@@ -138,6 +139,7 @@ for (unsigned int j =0; j < this->NbrNeurons;j++){
 
 for(unsigned int l = 0;l < iterations;l++){
 //Boucle qui parcours les exemples
+    error = 0;
 for (unsigned int i=0;i < this->tableTruth.size();i++){
     //On met toutes les valeurs des connexions en entrées
     for(unsigned int j =0; j < this->NbrNeurons;j++){
@@ -170,6 +172,7 @@ error+=0.5*(ydes-ycalc)*(ydes-ycalc);
 }
 
 std::cout << error << std::endl;
+errors.push_back(error);
 }
 
 }
