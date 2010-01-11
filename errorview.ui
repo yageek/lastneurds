@@ -20,13 +20,6 @@
    <item>
     <widget class="QwtPlot" name="qwtPlot"/>
    </item>
-   <item>
-    <widget class="QPushButton" name="pushButton">
-     <property name="text">
-      <string>Teste</string>
-     </property>
-    </widget>
-   </item>
   </layout>
  </widget>
  <customwidgets>

@@ -11,7 +11,7 @@ class ErrorView : public QWidget, private Ui::ErrorView {
 
 QVector<double> errors;
 public:
-    ErrorView(QVector<double>  errors,QWidget *parent = 0);
+    ErrorView(QVector<double> error,QWidget *parent = 0);
 
 protected:
     void changeEvent(QEvent *e);

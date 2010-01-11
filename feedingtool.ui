@@ -64,6 +64,9 @@
        <property name="minimum">
         <number>1</number>
        </property>
+       <property name="maximum">
+        <number>9999</number>
+       </property>
       </widget>
      </item>
      <item>
@@ -74,7 +77,17 @@
       </widget>
      </item>
      <item>
-      <widget class="QDoubleSpinBox" name="spinLearningrate"/>
+      <widget class="QDoubleSpinBox" name="spinLearningrate">
+       <property name="minimum">
+        <double>-99.000000000000000</double>
+       </property>
+       <property name="singleStep">
+        <double>0.100000000000000</double>
+       </property>
+       <property name="value">
+        <double>0.040000000000000</double>
+       </property>
+      </widget>
      </item>
      <item>
       <widget class="QPushButton" name="learnButton">

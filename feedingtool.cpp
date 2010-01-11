@@ -136,6 +136,8 @@ for (unsigned int j =0; j < this->NbrNeurons;j++){
 }
 
 }
+this->progressBar->setMinimum(0);
+this->progressBar->setMaximum(iterations);
 
 for(unsigned int l = 0;l < iterations;l++){
 //Boucle qui parcours les exemples
@@ -154,13 +156,13 @@ for (unsigned int i=0;i < this->tableTruth.size();i++){
     float temp = output->OutputWithCurrentNet();
     output->UpdateNetOutput(temp);
 
-
-output->LearnGradient(this->tableTruth.at(i).getOutput(),0.045);
+float learningRate = this->spinLearningrate->value();
+output->LearnGradient(this->tableTruth.at(i).getOutput(),learningRate);
 
 //on appelle pour chacun des neurones
 
 for (unsigned int k = 0;k< this->NbrNeurons;k++){
-    perceptron->at(k)->LearnGradient(this->tableTruth.at(i).getOutput(),0.045);
+    perceptron->at(k)->LearnGradient(this->tableTruth.at(i).getOutput(),learningRate);
 
 }
 
@@ -171,10 +173,13 @@ error+=0.5*(ydes-ycalc)*(ydes-ycalc);
 
 }
 
-std::cout << error << std::endl;
+//std::cout << error << std::endl;
 errors.push_back(error);
+this->progressBar->setValue(l);
 }
-
+this->progressBar->reset();
+ErrorView *view = new ErrorView(errors);
+view->setVisible(true);
 }
 
 

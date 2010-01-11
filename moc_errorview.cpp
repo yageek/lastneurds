@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'errorview.h'
 **
-** Created: Mon Jan 11 13:50:20 2010
+** Created: Mon Jan 11 14:23:14 2010
 **      by: The Qt Meta Object Compiler version 61 (Qt 4.5.2)
 **
 ** WARNING! All changes made in this file will be lost!

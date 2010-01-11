@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading ui file 'feedingtool.ui'
 **
-** Created: Sun Jan 10 19:13:21 2010
+** Created: Mon Jan 11 14:33:49 2010
 **      by: Qt User Interface Compiler version 4.5.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling ui file!
@@ -86,6 +86,7 @@ public:
         iteration = new QSpinBox(FeedingTool);
         iteration->setObjectName(QString::fromUtf8("iteration"));
         iteration->setMinimum(1);
+        iteration->setMaximum(9999);
 
         horizontalLayout->addWidget(iteration);
 
@@ -96,6 +97,9 @@ public:
 
         spinLearningrate = new QDoubleSpinBox(FeedingTool);
         spinLearningrate->setObjectName(QString::fromUtf8("spinLearningrate"));
+        spinLearningrate->setMinimum(-99);
+        spinLearningrate->setSingleStep(0.1);
+        spinLearningrate->setValue(0.04);
 
         horizontalLayout->addWidget(spinLearningrate);
 
