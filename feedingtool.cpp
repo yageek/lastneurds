@@ -92,7 +92,7 @@ this->updateTruth();
 }
 
 void FeedingTool::Learning(){
-
+float error =0;
 int iterations = this->iteration->value();
 //On crée un tableau de perceptron
 vector<Neurone*> *perceptron = new vector<Neurone*>();
@@ -107,6 +107,7 @@ output->setW_0(0.5);
 Net *net_output = new Net();
 net_output->Link(output,NULL);
 Net *net_temp;
+//iterations
 
 for(unsigned int i = 0; i < this->NbrNeurons;i++){
     temp = new Neurone();
@@ -134,26 +135,42 @@ for (unsigned int j =0; j < this->NbrNeurons;j++){
 }
 
 }
+
+for(unsigned int l = 0;l < iterations;l++){
 //Boucle qui parcours les exemples
 for (unsigned int i=0;i < this->tableTruth.size();i++){
     //On met toutes les valeurs des connexions en entrées
     for(unsigned int j =0; j < this->NbrNeurons;j++){
 
         perceptron->at(j)->setupTruth(this->tableTruth.at(i));
-        perceptron->at(j)->OutputWithCurrentNet();
+        float S = perceptron->at(j)->OutputWithCurrentNet();
+        perceptron->at(j)->UpdateNetOutput(S);
 
 
     }//-->fin de mise des valeurs et de la diffusion
 
-    output->OutputWithCurrentNet();
+    float temp = output->OutputWithCurrentNet();
+    output->UpdateNetOutput(temp);
 
 
+output->LearnGradient(this->tableTruth.at(i).getOutput(),0.045);
 
+//on appelle pour chacun des neurones
+
+for (unsigned int k = 0;k< this->NbrNeurons;k++){
+    perceptron->at(k)->LearnGradient(this->tableTruth.at(i).getOutput(),0.045);
 
 }
 
+//fin pour un exemple
+float ycalc = output->OutputWithCurrentNet();
+float ydes = this->tableTruth.at(i).getOutput();
+error+=0.5*(ydes-ycalc)*(ydes-ycalc);
 
+}
 
+std::cout << error << std::endl;
+}
 
 }
 

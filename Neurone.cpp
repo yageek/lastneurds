@@ -133,16 +133,20 @@ void Neurone::setupTruth(Truth example){
 
 }
 
+void Neurone::UpdateNetOutput(float value){
+
+for (unsigned int i =0; i < this->getNetOutputs ().size();i++){
+        this->getNetOutputs ().at(i)->setValue(value);
+
+
+        }
+
+
+
+}
 float Neurone::OutputWithCurrentNet(){
 	this->INWithCurrentNet ();      // à la fin, on réaffecte la valeur de IN : setIN
 float S = this->seuil_function(this->getIN());
-//Apply value to all output NETS
-
-	for (unsigned int i =0; i < this->getNetOutputs ().size();i++){
-	this->getNetOutputs ().at(i)->setValue(S);
-
-
-	}
 
 
 	return S;
@@ -163,7 +167,56 @@ float S = 0;
 	return S;
 
 }
+
 //Apprentissage
+void Neurone::LearnGradient(float ydes,float learningRate){
+    float Err=0;
+
+        //Couche non cachée
+    if(this->getHidden() == false){
+        //Neurone de sortie
+        float ycalc = this->getNetOutputs().at(0)->getValue();
+        for(unsigned int i = 0; i < this->getNetEntries().size();i++){
+            //Pour chacun des poids en entrées
+            float lastValue = this->getNetEntries().at(i)->getEntry()->OutputWithCurrentNet();
+
+             Err = -1*(ydes-ycalc)*this->seuil_derivated_function(this->getIN());
+
+            float temp = -1*learningRate*Err*lastValue;
+            float last = this->getNetEntries().at(i)->getWeight();
+            this->getNetEntries().at(i)->setWeight(last + temp);
+
+
+
+        }
+
+    }//couche cachée
+    else {
+            float ycalc = this->getNetOutputs().at(0)->getOutput()->getNetOutputs().at(0)->getValue();
+            float g_a = this->getNetOutputs().at(0)->getOutput()->DerivatedOutput();
+            float Err = -1*learningRate*(ydes-ycalc)*g_a;
+            for(unsigned int j =0; j < this->getNetEntries().size();j++){
+                    
+                    
+                    float temp =-1* Err*this->getNetOutputs().at(0)->getWeight()*this->DerivatedOutput();
+                    temp*=this->getNetEntries().at(j)->getValue();
+
+                    float last = this->getNetEntries().at(j)->getWeight();
+                    this->getNetEntries().at(j)->setWeight(last + temp);
+
+
+
+
+            }
+
+
+
+
+
+    }
+
+}
+/*
 float Neurone::LearnGradient(vector<Truth> table,float learningRate){
 
 vector<float> temp_value(this->getNetEntries().size(),0);
@@ -197,6 +250,7 @@ this->getNetEntries().at(k)->setWeight(modif);
 }
 return error;
 }
+*/
 
 float Neurone::LearnWidrowHoff(vector<Truth> table, float learningRate){
 float error = 0;
@@ -231,4 +285,8 @@ error*=0.5;
 cout << "Erreur : " << error << endl;
 return error;
 
+}
+float Neurone::DerivatedOutput(){
+
+return this->seuil_derivated_function(this->getIN());
 }

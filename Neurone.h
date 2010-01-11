@@ -70,12 +70,14 @@ class Neurone {
 
 
 	////Algorithms
-	float LearnGradient(vector<Truth> table,float learningRate);
+        void LearnGradient(float outputExemple,float learningRate);
 	float LearnWidrowHoff(vector<Truth> table,float learningRate);
 	////Connexions and relations
 	void setupTruth(Truth example);
 	float INWithCurrentNet();
 	float OutputWithCurrentNet();
+        float DerivatedOutput();
+        void UpdateNetOutput(float value);
 	//Afficher Neurone
 	void DisplayState();
 
