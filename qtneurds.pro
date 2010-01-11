@@ -20,7 +20,8 @@ SOURCES += main.cpp \
     feedingtool.cpp \
     addexemple.cpp \
     editexemple.cpp \
-    errorview.cpp
+    errorview.cpp \
+    testperceptron.cpp
 HEADERS += mainwindow.h \
     Network.h \
     Truth.h \
@@ -36,7 +37,8 @@ HEADERS += mainwindow.h \
     feedingtool.h \
     addexemple.h \
     editexemple.h \
-    errorview.h
+    errorview.h \
+    testperceptron.h
 FORMS += mainwindow.ui \
     networkmanager.ui \
     setupnewnetwork.ui \
@@ -47,4 +49,4 @@ FORMS += mainwindow.ui \
     errorview.ui
 RESOURCES += resources.qrc
 INCLUDEPATH += /usr/include/qwt-qt4/
-LIBS+= -lqwt-qt4
+LIBS += -lqwt-qt4

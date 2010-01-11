@@ -5,6 +5,9 @@
 #include "editexemple.h"
 #include "Neurone.h"
 #include "Seuil_function.h"
+extern "C"{
+#include <stdio.h>
+}
 FeedingTool::FeedingTool(QWidget *parent) :
     QWidget(parent){
     setupUi(this);
@@ -96,7 +99,7 @@ float error =0;
 QVector<double> errors;
 int iterations = this->iteration->value();
 //On crée un tableau de perceptron
-vector<Neurone*> *perceptron = new vector<Neurone*>();
+this->perceptron = new vector<Neurone*>();
 Neurone * temp;
 //Neurone de sortie
 Neurone * output = new Neurone();
@@ -114,18 +117,18 @@ for(unsigned int i = 0; i < this->NbrNeurons;i++){
     temp = new Neurone();
     temp->setSeuilFunction(TangenteH);
     temp->setSeuilDerivatedFunction(DerivatedTangenteH);
-    temp->setW_0(0.5);
+    temp->setW_0(0.0);
     perceptron->push_back(temp);
     //On connecte chaque neurone au neurone de fin
     net_temp = new Net;
-    net_temp->setWeight(hasard(-1,1));
+    net_temp->setWeight(hasard(0,1));
     net_temp->Link(temp,output);
     }
 
 //On crée les entrées et on les connectes aux neurones
 for (unsigned int i = 0; i < this->NbrEntries;i++){
 net_temp = new Net;
-net_temp->setWeight(hasard(-1,1));
+net_temp->setWeight(hasard(0,1));
 
     //Connection
 for (unsigned int j =0; j < this->NbrNeurons;j++){
@@ -157,6 +160,7 @@ for (unsigned int i=0;i < this->tableTruth.size();i++){
     output->UpdateNetOutput(temp);
 
 float learningRate = this->spinLearningrate->value();
+
 output->LearnGradient(this->tableTruth.at(i).getOutput(),learningRate);
 
 //on appelle pour chacun des neurones
@@ -180,6 +184,11 @@ this->progressBar->setValue(l);
 this->progressBar->reset();
 ErrorView *view = new ErrorView(errors);
 view->setVisible(true);
+
+
+
+
+
 }
 
 

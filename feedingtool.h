@@ -2,7 +2,7 @@
 #define FEEDINGTOOL_H
 #include "Truth.h"
 #include "ui_feedingtool.h"
-
+#include "Neurone.h"
 class FeedingTool : public QWidget, private Ui::FeedingTool {
     Q_OBJECT
 public:
@@ -27,6 +27,8 @@ protected:
     QString Threshold;
     QString name;
     vector<Truth> tableTruth;
+    vector<Neurone*> *perceptron;
+
 };
 
 #endif // FEEDINGTOOL_H
