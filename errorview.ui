@@ -9,16 +9,24 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
+    <width>459</width>
     <height>300</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Error Evolution</string>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout">
+  <layout class="QHBoxLayout" name="horizontalLayout">
    <item>
     <widget class="QwtPlot" name="qwtPlot"/>
+   </item>
+   <item>
+    <widget class="QTableWidget" name="errorTable">
+     <property name="columnCount">
+      <number>1</number>
+     </property>
+     <column/>
+    </widget>
    </item>
   </layout>
  </widget>

@@ -20,7 +20,14 @@ if (in >= 0) return 1.0; else return 0.0;
 
 
  }
+ float Linear(float in){
 
+     return in;
+ }
+ float DerivatedLinear(float in){
+
+     return 1;
+ }
 float Seuil_Sigmoide(float in){
 return 1/(1+exp(-1*in));
 

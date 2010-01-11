@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading ui file 'errorview.ui'
 **
-** Created: Mon Jan 11 14:23:11 2010
+** Created: Mon Jan 11 15:36:06 2010
 **      by: Qt User Interface Compiler version 4.5.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling ui file!
@@ -14,8 +14,9 @@
 #include <QtGui/QAction>
 #include <QtGui/QApplication>
 #include <QtGui/QButtonGroup>
+#include <QtGui/QHBoxLayout>
 #include <QtGui/QHeaderView>
-#include <QtGui/QVBoxLayout>
+#include <QtGui/QTableWidget>
 #include <QtGui/QWidget>
 #include "qwt_plot.h"
 
@@ -24,21 +25,30 @@ QT_BEGIN_NAMESPACE
 class Ui_ErrorView
 {
 public:
-    QVBoxLayout *verticalLayout;
+    QHBoxLayout *horizontalLayout;
     QwtPlot *qwtPlot;
+    QTableWidget *errorTable;
 
     void setupUi(QWidget *ErrorView)
     {
         if (ErrorView->objectName().isEmpty())
             ErrorView->setObjectName(QString::fromUtf8("ErrorView"));
         ErrorView->setWindowModality(Qt::WindowModal);
-        ErrorView->resize(400, 300);
-        verticalLayout = new QVBoxLayout(ErrorView);
-        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
+        ErrorView->resize(459, 300);
+        horizontalLayout = new QHBoxLayout(ErrorView);
+        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         qwtPlot = new QwtPlot(ErrorView);
         qwtPlot->setObjectName(QString::fromUtf8("qwtPlot"));
 
-        verticalLayout->addWidget(qwtPlot);
+        horizontalLayout->addWidget(qwtPlot);
+
+        errorTable = new QTableWidget(ErrorView);
+        if (errorTable->columnCount() < 1)
+            errorTable->setColumnCount(1);
+        errorTable->setObjectName(QString::fromUtf8("errorTable"));
+        errorTable->setColumnCount(1);
+
+        horizontalLayout->addWidget(errorTable);
 
 
         retranslateUi(ErrorView);

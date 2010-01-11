@@ -101,8 +101,8 @@ Neurone * temp;
 //Neurone de sortie
 Neurone * output = new Neurone();
 output->setHidden(false);
-output->setSeuilDerivatedFunction(DerivatedTangenteH);
-output->setSeuilFunction(TangenteH);
+output->setSeuilDerivatedFunction(DerivatedLinear);
+output->setSeuilFunction(Linear);
 output->setW_0(0.5);
 //Net de sortie
 Net *net_output = new Net();
