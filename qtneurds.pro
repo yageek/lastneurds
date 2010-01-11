@@ -19,7 +19,8 @@ SOURCES += main.cpp \
     entryitem.cpp \
     feedingtool.cpp \
     addexemple.cpp \
-    editexemple.cpp
+    editexemple.cpp \
+    errorview.cpp
 HEADERS += mainwindow.h \
     Network.h \
     Truth.h \
@@ -34,12 +35,16 @@ HEADERS += mainwindow.h \
     entryitem.h \
     feedingtool.h \
     addexemple.h \
-    editexemple.h
+    editexemple.h \
+    errorview.h
 FORMS += mainwindow.ui \
     networkmanager.ui \
     setupnewnetwork.ui \
     learningtool.ui \
     feedingtool.ui \
     addexemple.ui \
-    editexemple.ui
+    editexemple.ui \
+    errorview.ui
 RESOURCES += resources.qrc
+INCLUDEPATH += /usr/include/qwt-qt4/
+LIBS+= -lqwt-qt4

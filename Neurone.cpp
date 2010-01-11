@@ -182,7 +182,7 @@ void Neurone::LearnGradient(float ydes,float learningRate){
 
              Err = -1*(ydes-ycalc)*this->seuil_derivated_function(this->getIN());
 
-            float temp = -1*learningRate*Err*lastValue;
+            float temp = learningRate*Err*lastValue;
             float last = this->getNetEntries().at(i)->getWeight();
             this->getNetEntries().at(i)->setWeight(last + temp);
 
@@ -198,7 +198,7 @@ void Neurone::LearnGradient(float ydes,float learningRate){
             for(unsigned int j =0; j < this->getNetEntries().size();j++){
                     
                     
-                    float temp =-1* Err*this->getNetOutputs().at(0)->getWeight()*this->DerivatedOutput();
+                    float temp = Err*this->getNetOutputs().at(0)->getWeight()*this->DerivatedOutput();
                     temp*=this->getNetEntries().at(j)->getValue();
 
                     float last = this->getNetEntries().at(j)->getWeight();
