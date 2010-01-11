@@ -97,10 +97,17 @@ int iterations = this->iteration->value();
 //On crée un tableau de perceptron
 vector<Neurone*> *perceptron = new vector<Neurone*>();
 Neurone * temp;
+//Neurone de sortie
 Neurone * output = new Neurone();
+output->setHidden(false);
+output->setSeuilDerivatedFunction(DerivatedTangenteH);
+output->setSeuilFunction(TangenteH);
+output->setW_0(0.5);
+//Net de sortie
 Net *net_output = new Net();
 net_output->Link(output,NULL);
 Net *net_temp;
+
 for(unsigned int i = 0; i < this->NbrNeurons;i++){
     temp = new Neurone();
     temp->setSeuilFunction(TangenteH);
@@ -110,7 +117,7 @@ for(unsigned int i = 0; i < this->NbrNeurons;i++){
     //On connecte chaque neurone au neurone de fin
     net_temp = new Net;
     net_temp->setWeight(hasard(-1,1));
-    net_temp->Link(temp,NULL);
+    net_temp->Link(temp,output);
     }
 
 //On crée les entrées et on les connectes aux neurones
@@ -123,10 +130,32 @@ for (unsigned int j =0; j < this->NbrNeurons;j++){
 
     net_temp->Link(NULL,perceptron->at(j));
 
-}
 
 }
 
+}
+//Boucle qui parcours les exemples
+for (unsigned int i=0;i < this->tableTruth.size();i++){
+    //On met toutes les valeurs des connexions en entrées
+    for(unsigned int j =0; j < this->NbrNeurons;j++){
+
+        perceptron->at(j)->setupTruth(this->tableTruth.at(i));
+        perceptron->at(j)->OutputWithCurrentNet();
+
+
+    }//-->fin de mise des valeurs et de la diffusion
+
+    output->OutputWithCurrentNet();
+
+
 
 
 }
+
+
+
+
+}
+
+
+

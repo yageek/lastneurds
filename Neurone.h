@@ -32,6 +32,7 @@ using namespace std;
 class Neurone {
     //Attribut de la classe Neurone
     private :
+        bool hidden;
         float IN;                   // Valeur du Neurone
         float w_0;                  // Seuil
         vector<Net *> NetEntries;   // Valeurs des entrées
@@ -50,12 +51,13 @@ class Neurone {
         void setNetOutputs(vector<Net* > NetOutputs);
 		void setSeuilFunction(float (*p)(float));
 		void setSeuilDerivatedFunction(float (*p)(float));
+               void setHidden(bool value);
     //Accesseurs GET
         float getIN(void);
         float getW_0(void);
         vector<Net*> getNetEntries(void);
         vector<Net*> getNetOutputs(void);
-
+        bool getHidden();
 
 	//Net Methods
 		//Entry

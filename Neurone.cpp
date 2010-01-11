@@ -44,6 +44,10 @@ this->seuil_derivated_function = p ;
 
 
 }
+
+void Neurone::setHidden(bool value){
+    this->hidden = value;
+}
 //Accesseurs GET :
 float Neurone::getIN(void) {
     return this->IN ;
@@ -58,10 +62,14 @@ vector<Net*> Neurone::getNetOutputs(void) {
     return this->NetOutputs ;
 }
 
+bool Neurone::getHidden(){
+    return this->hidden;
 
+}
 //Constructeurs
 Neurone::Neurone(){
 	seuil_function = Seuil_Heavside;
+        this->setHidden(true);
 }
 
 
