@@ -44,6 +44,7 @@ public class TesteReseau extends javax.swing.JFrame {
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jScrollPane1 = new javax.swing.JScrollPane();
         dessinReseau = new lastneurds.DessinReseau();
+        errorView = new lastneurds.ErrorView();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -74,6 +75,7 @@ public class TesteReseau extends javax.swing.JFrame {
         jScrollPane1.setViewportView(dessinReseau);
 
         jTabbedPane1.addTab("Dessin du réseau", jScrollPane1);
+        jTabbedPane1.addTab("Erreur", errorView);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -146,6 +148,7 @@ public class TesteReseau extends javax.swing.JFrame {
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
     private lastneurds.DessinReseau dessinReseau;
+    private lastneurds.ErrorView errorView;
     private javax.swing.JSpinner iterationSpinner;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
