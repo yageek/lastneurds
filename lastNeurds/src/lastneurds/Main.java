@@ -5,8 +5,6 @@
 
 package lastneurds;
 
-import java.util.ArrayList;
-
 /**
  *
  * @author yaya
@@ -17,6 +15,11 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+      
+        TesteReseau fen =  new TesteReseau();
+        fen.setVisible(true);
+        
+/*
      NetworkSimple net = new NetworkSimple(20,2);
      
 
@@ -34,14 +37,14 @@ public class Main {
      truth = new Truth(2);
      truth.getEntries().set(0, 0.0);
      truth.getEntries().set(1, 1.0);
-     truth.setOutput(0.0);
+     truth.setOutput(1.0);
      Table.add(truth);
 
      //10
      truth = new Truth(2);
      truth.getEntries().set(0, 1.0);
      truth.getEntries().set(1, 0.0);
-     truth.setOutput(0.0);
+     truth.setOutput(1.0);
      Table.add(truth);
 
      //11
@@ -51,8 +54,8 @@ public class Main {
      truth.setOutput(1.0);
      Table.add(truth);
 
-for(int i = 0; i < 50;i++){
-             net.Learn(Table,0.045);
+for(int i = 0; i < 30;i++){
+             net.Learn(Table,0.2);
 }
     
 
@@ -75,7 +78,7 @@ for(int i = 0; i < 50;i++){
 
 
    
-     
+*/
     }
 
 }
