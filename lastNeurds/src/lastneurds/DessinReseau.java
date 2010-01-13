@@ -50,7 +50,9 @@ public class DessinReseau extends JPanel{
         int yEntries = 10 + (this.NbrNeurons*40 - 80)/2;
         int yNeurons = 10;
    
-        //On dessine les entrées
+        //On dessine le neurones de sorties
+        g.setColor(Color.ORANGE);
+        g.fillOval(this.getWidth()-70, yEntries - 5,40, 40);
 
        
         //On dessine les sorties
@@ -58,7 +60,10 @@ public class DessinReseau extends JPanel{
         for(int i = 0; i< NbrNeurons;i++){
             g.setColor(Color.blue);
             g.fillOval(xNeurons , yNeurons + i*40, 30, 30);
-            
+            g.setColor(Color.CYAN);
+
+            //on le connect au neurones de sortie
+            g.drawLine(this.getWidth()-50,yEntries+15, xNeurons +15,15+ yNeurons + i*40);
         }
         
 
