@@ -5,7 +5,6 @@
 
 package lastneurds;
 
-import com.sun.org.apache.bcel.internal.generic.GETFIELD;
 import java.util.ArrayList;
 
 /**
@@ -18,7 +17,7 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-     NetworkSimple net = new NetworkSimple(10,2);
+     NetworkSimple net = new NetworkSimple(20,2);
      
 
 
@@ -53,7 +52,7 @@ public class Main {
      Table.add(truth);
 
 for(int i = 0; i < 50;i++){
-             net.Learn(Table,0.04);
+             net.Learn(Table,0.045);
 }
     
 
