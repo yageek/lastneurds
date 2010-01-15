@@ -17,14 +17,14 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-      
+     /*
         TesteReseau fen =  new TesteReseau();
         fen.setVisible(true);
-        
+       */
   
      NetworkSimple net = new NetworkSimple(10,2);
      
-/*
+
 
      ArrayList<Truth> Table = new ArrayList<Truth>();
      //FONCTION ET
@@ -74,13 +74,13 @@ for(int i = 0; i < 30;i++){
      truth.getEntries().set(1, 1.0);
      System.out.println("Retour du neurone 01: " + net.Query(truth));
 
-     truth.getEntries().set(0, 0.0);
-     truth.getEntries().set(1, 0.0);
+     truth.getEntries().set(0, 0.1);
+     truth.getEntries().set(1, 0.1);
      System.out.println("Retour du neurone 00: " + net.Query(truth));
 
 
    
-*/
+
     }
 
 }
