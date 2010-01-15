@@ -38,6 +38,7 @@ public class Neuron {
         this.setOutput(0);
         this.Entrees = new ArrayList<Net>();
         this.Outputs = new ArrayList<Net>();
+        this.setSeuil(0.5);
     }
     public void Diffuse(Truth exemple){
         double value =0;
@@ -51,6 +52,8 @@ public class Neuron {
             value += temp.getValue()*temp.getWeight();
         }
       //  System.out.println("Diffusion avec exemple : " + value);
+        //seuil
+        value-=this.getSeuil();
         this.SetInAndOutput(value);
        
         
@@ -65,6 +68,7 @@ public class Neuron {
         }
 
       //  System.out.println("Diffusion  : " + value);
+        value-=this.getSeuil();
         this.SetInAndOutput(value);
         
        
