@@ -12,7 +12,7 @@ package lastneurds;
 public class Net {
 
     public Net() {
-        this.setWeight(Math.random()*2-1);
+        this.setWeight(Math.random());
     }
 
     public Neuron getAfter() {
