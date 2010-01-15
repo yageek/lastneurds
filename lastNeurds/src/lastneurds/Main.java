@@ -5,6 +5,8 @@
 
 package lastneurds;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author yaya
@@ -19,8 +21,8 @@ public class Main {
         TesteReseau fen =  new TesteReseau();
         fen.setVisible(true);
         
-/*
-     NetworkSimple net = new NetworkSimple(20,2);
+  /*
+     NetworkSimple net = new NetworkSimple(1,2);
      
 
 

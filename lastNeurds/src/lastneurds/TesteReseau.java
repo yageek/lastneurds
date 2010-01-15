@@ -45,6 +45,7 @@ public class TesteReseau extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         dessinReseau = new lastneurds.DessinReseau();
         errorView = new lastneurds.ErrorView();
+        applicationPanel1 = new lastneurds.ApplicationPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -65,17 +66,30 @@ public class TesteReseau extends javax.swing.JFrame {
         dessinReseau.setLayout(dessinReseauLayout);
         dessinReseauLayout.setHorizontalGroup(
             dessinReseauLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
+            .addGap(0, 900, Short.MAX_VALUE)
         );
         dessinReseauLayout.setVerticalGroup(
             dessinReseauLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
+            .addGap(0, 20, Short.MAX_VALUE)
         );
 
         jScrollPane1.setViewportView(dessinReseau);
 
         jTabbedPane1.addTab("Dessin du réseau", jScrollPane1);
         jTabbedPane1.addTab("Erreur", errorView);
+
+        javax.swing.GroupLayout applicationPanel1Layout = new javax.swing.GroupLayout(applicationPanel1);
+        applicationPanel1.setLayout(applicationPanel1Layout);
+        applicationPanel1Layout.setHorizontalGroup(
+            applicationPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 708, Short.MAX_VALUE)
+        );
+        applicationPanel1Layout.setVerticalGroup(
+            applicationPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 298, Short.MAX_VALUE)
+        );
+
+        jTabbedPane1.addTab("Application", applicationPanel1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -145,6 +159,7 @@ public class TesteReseau extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private lastneurds.ApplicationPanel applicationPanel1;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
     private lastneurds.DessinReseau dessinReseau;
