@@ -17,14 +17,14 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-      /*
+      
         TesteReseau fen =  new TesteReseau();
         fen.setVisible(true);
-        */
+        
   
-     NetworkSimple net = new NetworkSimple(1,2);
+     NetworkSimple net = new NetworkSimple(10,2);
      
-
+/*
 
      ArrayList<Truth> Table = new ArrayList<Truth>();
      //FONCTION ET
@@ -32,7 +32,7 @@ public class Main {
      Truth truth = new Truth(2);
      truth.getEntries().set(0, 0.0);
      truth.getEntries().set(1, 0.0);
-     truth.setOutput(0.0);
+     truth.setOutput(1.0);
      Table.add(truth);
 
      //01
@@ -53,7 +53,7 @@ public class Main {
      truth = new Truth(2);
      truth.getEntries().set(0, 1.0);
      truth.getEntries().set(1, 1.0);
-     truth.setOutput(1.0);
+     truth.setOutput(0.0);
      Table.add(truth);
 
 for(int i = 0; i < 30;i++){
@@ -80,7 +80,7 @@ for(int i = 0; i < 30;i++){
 
 
    
-
+*/
     }
 
 }

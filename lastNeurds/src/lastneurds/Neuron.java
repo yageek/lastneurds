@@ -17,6 +17,7 @@ public class Neuron {
     private double output;
     private ArrayList<Net> Entrees;
     private ArrayList<Net> Outputs;
+    private double seuil;
 
     public void SetInAndOutput(double value){
 
@@ -136,4 +137,13 @@ public class Neuron {
             temp.ApplyCorrection(Err);
         }
     }
+
+    public double getSeuil() {
+        return seuil;
+    }
+
+    public void setSeuil(double seuil) {
+        this.seuil = seuil;
+    }
+    
 }

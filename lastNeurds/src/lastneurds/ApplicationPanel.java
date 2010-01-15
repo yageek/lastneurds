@@ -111,7 +111,7 @@ public class ApplicationPanel extends javax.swing.JPanel {
         for(Point temp:this.getEntrees()){
             if(temp.getType() == Point.Type.BLEU) g.setColor(Color.blue);
 
-             else if(temp.getType() == Point.Type.VERT) g.setColor(Color.green);
+             else if(temp.getType() == Point.Type.VERT) g.setColor(Color.red);
 
             g.fillRect(temp.getX()-5,temp.getY()-5, 10, 10);
         }

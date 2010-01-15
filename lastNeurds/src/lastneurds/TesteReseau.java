@@ -156,8 +156,7 @@ public class TesteReseau extends javax.swing.JFrame {
 
         //on efface le contenu de l'applications
         Graphics g = this.applicationPanel.getGraphics();
-        g.setColor(Color.white);
-        g.fillRect(0,0, this.getWidth(),this.getHeight());
+        
 
         this.net = new NetworkSimple(NbrNeurons,2);
 
@@ -172,22 +171,26 @@ public class TesteReseau extends javax.swing.JFrame {
         }
         //On réinterroge tout l'écran
         Truth temp_truth;
-        for(int x = 0; x < this.getWidth();x++){
+        for(int x = 0; x < this.getWidth();x+=5){
 
 
-            for(int y = 0; y < this.getHeight();y++){
+
+            for(int y = 0; y < this.getHeight();y+=5){
                 temp_truth = new Truth(2);
                 temp_truth.getEntries().set(0, (double) x);
                 temp_truth.getEntries().set(1, (double) y);
                 double retour = this.net.Query(temp_truth);
-                
+                if(retour > 0.5) g.setColor(Color.red);
+                if(retour < 0.5) g.setColor(Color.blue);
+
+                g.fillOval(x, y, 3,3);
 
 
                 
             }
         }
+        this.progressBar.setValue(0);
         
- 
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
