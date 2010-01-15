@@ -17,10 +17,10 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-     /*
+     
         TesteReseau fen =  new TesteReseau();
         fen.setVisible(true);
-       */
+      /*
   
      NetworkSimple net = new NetworkSimple(10,2);
      
@@ -79,7 +79,7 @@ for(int i = 0; i < 30;i++){
      System.out.println("Retour du neurone 00: " + net.Query(truth));
 
 
-   
+   */
 
     }
 

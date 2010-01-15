@@ -170,6 +170,8 @@ public class TesteReseau extends javax.swing.JFrame {
             this.progressBar.setValue(i);
         }
         //On réinterroge tout l'écran
+        int height = this.applicationPanel.getHeight();
+        int width = this.applicationPanel.getWidth();
         Truth temp_truth;
         for(int x = 0; x < this.getWidth();x+=5){
 
@@ -177,8 +179,8 @@ public class TesteReseau extends javax.swing.JFrame {
 
             for(int y = 0; y < this.getHeight();y+=5){
                 temp_truth = new Truth(2);
-                temp_truth.getEntries().set(0, (double) x);
-                temp_truth.getEntries().set(1, (double) y);
+                temp_truth.getEntries().set(0, (double) x/width);
+                temp_truth.getEntries().set(1, (double) y/height);
                 double retour = this.net.Query(temp_truth);
                 if(retour > 0.5) g.setColor(Color.red);
                 if(retour < 0.5) g.setColor(Color.blue);

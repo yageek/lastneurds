@@ -38,7 +38,7 @@ public class Neuron {
         this.setOutput(0);
         this.Entrees = new ArrayList<Net>();
         this.Outputs = new ArrayList<Net>();
-        this.setSeuil(0.5);
+        this.setSeuil(0.0);
     }
     public void Diffuse(Truth exemple){
         double value =0;

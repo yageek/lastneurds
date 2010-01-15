@@ -86,12 +86,15 @@ public class ApplicationPanel extends javax.swing.JPanel {
         Truth truth;
         for(Point point:this.getEntrees()){
             truth = new Truth(2);
-     truth.getEntries().set(0,(double) point.getX());
-     truth.getEntries().set(1,(double) point.getY());
+     truth.getEntries().set(0,(double) point.getX()/this.getWidth());
+     truth.getEntries().set(1,(double) point.getY()/this.getHeight());
      if(point.getType() == Point.Type.BLEU) truth.setOutput(0.0);
      if(point.getType() == Point.Type.VERT) truth.setOutput(1.0);
      list.add(truth);
+     for(Truth temp:list){
 
+         System.out.println("X:" + temp.getEntries().get(0) + " - Y : "+ temp.getEntries().get(1) + "- Type :"+ temp.getOutput());
+     }
         }
 
         return list;
