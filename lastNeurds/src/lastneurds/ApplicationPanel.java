@@ -30,12 +30,6 @@ public class ApplicationPanel extends javax.swing.JPanel {
 
     }
 
-    public double Learn(double learningRate){
-    NetworkSimple net = new NetworkSimple(20,2);
-
-        return 0.0;
-    }
-
     /** This method is called from within the constructor to
      * initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is

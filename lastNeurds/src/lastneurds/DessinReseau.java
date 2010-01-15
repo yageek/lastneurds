@@ -55,8 +55,8 @@ public class DessinReseau extends JPanel implements Scrollable{
         int xNeurons = this.getWidth()/2;
         int height = this.getHeight();
 
-        int yEntries = 10 + (this.NbrNeurons*40 - 80)/2;
-        int yNeurons = 10;
+        int yEntries = 30 + (this.NbrNeurons*40 - 80)/2;
+        int yNeurons = 30;
    
         //On dessine le neurones de sorties
         g.setColor(Color.black);

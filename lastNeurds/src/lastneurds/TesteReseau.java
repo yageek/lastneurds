@@ -1,5 +1,7 @@
 package lastneurds;
 
+import javax.swing.SpinnerNumberModel;
+
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
@@ -20,7 +22,9 @@ public class TesteReseau extends javax.swing.JFrame {
     /** Creates new form TesteReseau */
     public TesteReseau() {
         initComponents();
-        
+        this.learningrateSpinner.setModel(new SpinnerNumberModel(0.2,0.001,1,0.001));
+        this.neuronSpinner.setModel(new SpinnerNumberModel(1,1,1000,1));
+        this.iterationSpinner.setModel(new SpinnerNumberModel(1,1,100000,1));
     }
     /** This method is called from within the constructor to
      * initialize the form.
@@ -175,5 +179,5 @@ public class TesteReseau extends javax.swing.JFrame {
     private javax.swing.JSpinner learningrateSpinner;
     private javax.swing.JSpinner neuronSpinner;
     // End of variables declaration//GEN-END:variables
-  
+ private NetworkSimple net;
 }
