@@ -29,7 +29,7 @@ public class ApplicationPanel extends javax.swing.JPanel {
         this.setBackground(Color.white);
 
     }
-
+    
     /** This method is called from within the constructor to
      * initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is
@@ -116,7 +116,7 @@ public class ApplicationPanel extends javax.swing.JPanel {
             g.fillRect(temp.getX()-5,temp.getY()-5, 10, 10);
         }
         
-    }
+        }
 
 
 }

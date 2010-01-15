@@ -1,5 +1,8 @@
 package lastneurds;
 
+import java.awt.Color;
+import java.awt.Graphics;
+import java.util.ArrayList;
 import javax.swing.SpinnerNumberModel;
 
 /*
@@ -39,7 +42,7 @@ public class TesteReseau extends javax.swing.JFrame {
         buttonGroup2 = new javax.swing.ButtonGroup();
         jLabel1 = new javax.swing.JLabel();
         neuronSpinner = new javax.swing.JSpinner();
-        jProgressBar1 = new javax.swing.JProgressBar();
+        progressBar = new javax.swing.JProgressBar();
         jButton1 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         iterationSpinner = new javax.swing.JSpinner();
@@ -49,7 +52,7 @@ public class TesteReseau extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         dessinReseau = new lastneurds.DessinReseau();
         errorView = new lastneurds.ErrorView();
-        applicationPanel1 = new lastneurds.ApplicationPanel();
+        applicationPanel = new lastneurds.ApplicationPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -70,11 +73,11 @@ public class TesteReseau extends javax.swing.JFrame {
         dessinReseau.setLayout(dessinReseauLayout);
         dessinReseauLayout.setHorizontalGroup(
             dessinReseauLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 900, Short.MAX_VALUE)
+            .addGap(0, 800, Short.MAX_VALUE)
         );
         dessinReseauLayout.setVerticalGroup(
             dessinReseauLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 20, Short.MAX_VALUE)
+            .addGap(0, 400, Short.MAX_VALUE)
         );
 
         jScrollPane1.setViewportView(dessinReseau);
@@ -82,18 +85,18 @@ public class TesteReseau extends javax.swing.JFrame {
         jTabbedPane1.addTab("Dessin du réseau", jScrollPane1);
         jTabbedPane1.addTab("Erreur", errorView);
 
-        javax.swing.GroupLayout applicationPanel1Layout = new javax.swing.GroupLayout(applicationPanel1);
-        applicationPanel1.setLayout(applicationPanel1Layout);
-        applicationPanel1Layout.setHorizontalGroup(
-            applicationPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout applicationPanelLayout = new javax.swing.GroupLayout(applicationPanel);
+        applicationPanel.setLayout(applicationPanelLayout);
+        applicationPanelLayout.setHorizontalGroup(
+            applicationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 708, Short.MAX_VALUE)
         );
-        applicationPanel1Layout.setVerticalGroup(
-            applicationPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        applicationPanelLayout.setVerticalGroup(
+            applicationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 298, Short.MAX_VALUE)
         );
 
-        jTabbedPane1.addTab("Application", applicationPanel1);
+        jTabbedPane1.addTab("Application", applicationPanel);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -117,7 +120,7 @@ public class TesteReseau extends javax.swing.JFrame {
                         .addComponent(learningrateSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButton1))
-                    .addComponent(jProgressBar1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 712, Short.MAX_VALUE))
+                    .addComponent(progressBar, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 712, Short.MAX_VALUE))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -133,9 +136,9 @@ public class TesteReseau extends javax.swing.JFrame {
                     .addComponent(jLabel3)
                     .addComponent(learningrateSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 327, Short.MAX_VALUE)
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 327, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jProgressBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(progressBar, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
@@ -144,10 +147,47 @@ public class TesteReseau extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         int NbrNeurons =((Integer) this.neuronSpinner.getValue());
+        int iterations = ((Integer) this.iterationSpinner.getValue());
+        double learningRate = ((Double) this.learningrateSpinner.getValue());
         if(NbrNeurons >0){
          this.dessinReseau.setNbrNeurons(NbrNeurons);
          this.dessinReseau.repaint();
         }
+
+        //on efface le contenu de l'applications
+        Graphics g = this.applicationPanel.getGraphics();
+        g.setColor(Color.white);
+        g.fillRect(0,0, this.getWidth(),this.getHeight());
+
+        this.net = new NetworkSimple(NbrNeurons,2);
+
+        
+        //this.progressBar.setMinimum(0);
+        //this.progressBar.setMinimum(iterations);
+        ArrayList<Truth> list = this.applicationPanel.setupTruth();
+
+        for(int i=0;i < iterations;i++){
+            this.net.Learn(list, learningRate);
+            this.progressBar.setValue(i);
+        }
+        //On réinterroge tout l'écran
+        Truth temp_truth;
+        for(int x = 0; x < this.getWidth();x++){
+
+
+            for(int y = 0; y < this.getHeight();y++){
+                temp_truth = new Truth(2);
+                temp_truth.getEntries().set(0, (double) x);
+                temp_truth.getEntries().set(1, (double) y);
+                double retour = this.net.Query(temp_truth);
+                
+
+
+                
+            }
+        }
+        
+ 
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -163,7 +203,7 @@ public class TesteReseau extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private lastneurds.ApplicationPanel applicationPanel1;
+    private lastneurds.ApplicationPanel applicationPanel;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
     private lastneurds.DessinReseau dessinReseau;
@@ -173,11 +213,11 @@ public class TesteReseau extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JProgressBar jProgressBar1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JSpinner learningrateSpinner;
     private javax.swing.JSpinner neuronSpinner;
+    private javax.swing.JProgressBar progressBar;
     // End of variables declaration//GEN-END:variables
  private NetworkSimple net;
 }

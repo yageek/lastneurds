@@ -14,10 +14,11 @@ import java.util.ArrayList;
 public class NetworkSimple {
     private HiddenLayer layer;
     private Neuron outputNeuron;
+    
 
     NetworkSimple(int NbrNeurons,int NbrEntries){
        
-
+    
            
     
     //on crée la couche
