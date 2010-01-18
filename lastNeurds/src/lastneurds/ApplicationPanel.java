@@ -20,6 +20,15 @@ import java.util.ArrayList;
  * @author yaya
  */
 public class ApplicationPanel extends javax.swing.JPanel {
+    private ArrayList<Point>  QueryPoint;
+
+    public ArrayList<Point> getQueryPoint() {
+        return QueryPoint;
+    }
+
+    public void setQueryPoint(ArrayList<Point> QueryPoint) {
+        this.QueryPoint = QueryPoint;
+    }
 
     /** Creates new form ApplicationPanel */
     public ApplicationPanel() {
@@ -27,6 +36,8 @@ public class ApplicationPanel extends javax.swing.JPanel {
         this.setSize(500,300);
         this.Entrees = new ArrayList<Point>();
         this.setBackground(Color.white);
+        this.QueryPoint = new ArrayList<Point> ();
+        
 
     }
     
@@ -118,8 +129,20 @@ public class ApplicationPanel extends javax.swing.JPanel {
 
             g.fillRect(temp.getX()-5,temp.getY()-5, 10, 10);
         }
+
+        //on dessine les calculs
+        for(Point temp:this.QueryPoint){
+            if(temp.getType() == Point.Type.BLEU) g.setColor(Color.blue);
+
+             else if(temp.getType() == Point.Type.VERT) g.setColor(Color.red);
+             
+
+            g.fillOval(temp.getX(), temp.getY(), 3, 3);
+        }
         
         }
+
+
 
 
 }

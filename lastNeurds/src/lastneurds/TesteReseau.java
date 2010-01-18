@@ -49,10 +49,9 @@ public class TesteReseau extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         learningrateSpinner = new javax.swing.JSpinner();
         jTabbedPane1 = new javax.swing.JTabbedPane();
+        applicationPanel = new lastneurds.ApplicationPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         dessinReseau = new lastneurds.DessinReseau();
-        errorView = new lastneurds.ErrorView();
-        applicationPanel = new lastneurds.ApplicationPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -69,22 +68,6 @@ public class TesteReseau extends javax.swing.JFrame {
 
         jLabel3.setText("Apprentissage");
 
-        javax.swing.GroupLayout dessinReseauLayout = new javax.swing.GroupLayout(dessinReseau);
-        dessinReseau.setLayout(dessinReseauLayout);
-        dessinReseauLayout.setHorizontalGroup(
-            dessinReseauLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 800, Short.MAX_VALUE)
-        );
-        dessinReseauLayout.setVerticalGroup(
-            dessinReseauLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-
-        jScrollPane1.setViewportView(dessinReseau);
-
-        jTabbedPane1.addTab("Dessin du réseau", jScrollPane1);
-        jTabbedPane1.addTab("Erreur", errorView);
-
         javax.swing.GroupLayout applicationPanelLayout = new javax.swing.GroupLayout(applicationPanel);
         applicationPanel.setLayout(applicationPanelLayout);
         applicationPanelLayout.setHorizontalGroup(
@@ -98,15 +81,29 @@ public class TesteReseau extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Application", applicationPanel);
 
+        javax.swing.GroupLayout dessinReseauLayout = new javax.swing.GroupLayout(dessinReseau);
+        dessinReseau.setLayout(dessinReseauLayout);
+        dessinReseauLayout.setHorizontalGroup(
+            dessinReseauLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 900, Short.MAX_VALUE)
+        );
+        dessinReseauLayout.setVerticalGroup(
+            dessinReseauLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 20, Short.MAX_VALUE)
+        );
+
+        jScrollPane1.setViewportView(dessinReseau);
+
+        jTabbedPane1.addTab("Dessin du réseau", jScrollPane1);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+            .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jTabbedPane1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 712, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(neuronSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -120,7 +117,8 @@ public class TesteReseau extends javax.swing.JFrame {
                         .addComponent(learningrateSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButton1))
-                    .addComponent(progressBar, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 712, Short.MAX_VALUE))
+                    .addComponent(progressBar, javax.swing.GroupLayout.DEFAULT_SIZE, 712, Short.MAX_VALUE)
+                    .addComponent(jTabbedPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 712, Short.MAX_VALUE))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -136,7 +134,7 @@ public class TesteReseau extends javax.swing.JFrame {
                     .addComponent(jLabel3)
                     .addComponent(learningrateSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 327, Short.MAX_VALUE)
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 327, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(progressBar, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
@@ -156,7 +154,7 @@ public class TesteReseau extends javax.swing.JFrame {
 
         //on efface le contenu de l'applications
         Graphics g = this.applicationPanel.getGraphics();
-        
+        this.applicationPanel.getQueryPoint().clear();
 
         this.net = new NetworkSimple(NbrNeurons,2);
 
@@ -173,6 +171,7 @@ public class TesteReseau extends javax.swing.JFrame {
         int height = this.applicationPanel.getHeight();
         int width = this.applicationPanel.getWidth();
         Truth temp_truth;
+
         for(int x = 0; x < this.getWidth();x+=5){
 
 
@@ -181,11 +180,17 @@ public class TesteReseau extends javax.swing.JFrame {
                 temp_truth = new Truth(2);
                 temp_truth.getEntries().set(0, (double) x/width);
                 temp_truth.getEntries().set(1, (double) y/height);
+                
                 double retour = this.net.Query(temp_truth);
-                if(retour > 0.5) g.setColor(Color.red);
-                if(retour < 0.5) g.setColor(Color.blue);
 
-                g.fillOval(x, y, 3,3);
+                
+
+                if(retour > 0.5) this.applicationPanel.getQueryPoint().add(new Point(x,y,Point.Type.VERT));
+                if(retour < 0.5) this.applicationPanel.getQueryPoint().add(new Point(x,y,Point.Type.BLEU));
+                this.applicationPanel.repaint();
+
+             //on ajoute un point
+
 
 
                 
@@ -212,7 +217,6 @@ public class TesteReseau extends javax.swing.JFrame {
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
     private lastneurds.DessinReseau dessinReseau;
-    private lastneurds.ErrorView errorView;
     private javax.swing.JSpinner iterationSpinner;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
