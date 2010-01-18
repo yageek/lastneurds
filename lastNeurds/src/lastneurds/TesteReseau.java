@@ -1,6 +1,5 @@
 package lastneurds;
 
-import java.awt.Color;
 import java.awt.Graphics;
 import java.util.ArrayList;
 import javax.swing.SpinnerNumberModel;
