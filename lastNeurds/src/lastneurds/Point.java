@@ -19,14 +19,14 @@ private Type type;
         this.x = x;
         this.y = y;
         this.type = Type.BLEU;
-        System.out.println("Création d'un point : " + this.type);
+        //System.out.println("Création d'un point : " + this.type);
     }
 
     public Point(int x, int y, Type type) {
         this.x = x;
         this.y = y;
         this.type = type;
-        System.out.println("Création d'un point : " + this.type);
+        //System.out.println("Création d'un point : " + this.type);
     }
 
     public int getX() {
